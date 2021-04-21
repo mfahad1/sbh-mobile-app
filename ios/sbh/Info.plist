@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>sbh</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>Roboto_medium.ttf</string>
+		<string>Roboto.ttf</string>
+		<string>rubicon-icon-font.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>Sailec Black Italic.otf</string>
+		<string>Sailec Black.otf</string>
+		<string>Sailec Bold Italic.otf</string>
+		<string>Sailec Bold.otf</string>
+		<string>Sailec Hairline Italic.otf</string>
+		<string>Sailec Hairline.otf</string>
+		<string>Sailec Light Italic.otf</string>
+		<string>Sailec Light.otf</string>
+		<string>Sailec Medium Italic.otf</string>
+		<string>Sailec Medium.otf</string>
+		<string>Sailec Regular Italic.otf</string>
+		<string>Sailec Regular.otf</string>
+		<string>Sailec Thin Italic.otf</string>
+		<string>Sailec Thin.otf</string>
+		<string>Sailec_Black_Italic.otf</string>
+		<string>Sailec_Black.otf</string>
+		<string>Sailec_Bold_Italic.otf</string>
+		<string>Sailec_Bold.otf</string>
+		<string>Sailec_Hairline_Italic.otf</string>
+		<string>Sailec_Hairline.otf</string>
+		<string>Sailec_Light_Italic.otf</string>
+		<string>Sailec_Light.otf</string>
+		<string>Sailec_Medium_Italic.otf</string>
+		<string>Sailec_Medium.otf</string>
+		<string>Sailec_Regular_Italic.otf</string>
+		<string>Sailec_Regular.otf</string>
+		<string>Sailec_Thin_Italic.otf</string>
+		<string>Sailec_Thin.otf</string>
+		<string>sailec_black_italic.otf</string>
+		<string>sailec_black.otf</string>
+		<string>sailec_bold_italic.otf</string>
+		<string>sailec_bold.otf</string>
+		<string>sailec_hairline_italic.otf</string>
+		<string>sailec_hairline.otf</string>
+		<string>sailec_light_italic.otf</string>
+		<string>sailec_light.otf</string>
+		<string>sailec_medium_italic.otf</string>
+		<string>sailec_medium.otf</string>
+		<string>sailec_regular_italic.otf</string>
+		<string>sailec_regular.otf</string>
+		<string>sailec_thin_italic.otf</string>
+		<string>sailec_thin.otf</string>
+	</array>
+</dict>
+</plist>

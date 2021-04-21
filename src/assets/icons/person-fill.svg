@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <linearGradient id="dmxfik7nda" x1="19.753%" x2="80.247%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#454F84"/>
+            <stop offset="100%" stop-color="#454F84" stop-opacity=".25"/>
+        </linearGradient>
+        <filter id="onymdsc9hb" width="160.2%" height="164.6%" x="-30.1%" y="-32.3%" filterUnits="objectBoundingBox">
+            <feOffset dx="10" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.355612378 0 0 0 0 0.414279225 0 0 0 0 0.575435915 0 0 0 0.12 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" opacity=".75">
+        <g fill="url(#dmxfik7nda)" transform="translate(-48 -503)">
+            <g filter="url(#onymdsc9hb)" transform="translate(17 406)">
+                <g>
+                    <g>
+                        <path d="M14 15.167c4.502 0 8.167 3.663 8.167 8.166 0 .644-.522 1.167-1.167 1.167H7c-.645 0-1.167-.523-1.167-1.167 0-4.503 3.665-8.166 8.167-8.166zM14 3.5c2.574 0 4.667 2.093 4.667 4.667 0 2.573-2.093 4.666-4.667 4.666S9.333 10.74 9.333 8.167C9.333 5.593 11.426 3.5 14 3.5z" transform="translate(20 83) translate(11 14)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

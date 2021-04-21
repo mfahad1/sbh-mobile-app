@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 70 50">
+    <defs>
+        <linearGradient id="oshgg36uda" x1="0%" x2="100%" y1="4.195%" y2="95.805%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity=".3"/>
+        </linearGradient>
+        <filter id="iy2plpu32b" width="160.2%" height="202.7%" x="-30.1%" y="-51.3%" filterUnits="objectBoundingBox">
+            <feOffset dx="10" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.377483284 0 0 0 0 0.719146286 0 0 0 0 0.476730562 0 0 0 0.2 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill="url(#oshgg36uda)" transform="translate(-79 -147)">
+            <g filter="url(#iy2plpu32b)" transform="translate(16 131)">
+                <path d="M120.078 45.124l-4.683 6.235c-.214.286-.327.635-.322.992l.123 7.799c.021 1.34-1.295 2.297-2.562 1.862l-7.378-2.527c-.338-.116-.705-.116-1.043 0l-7.379 2.527c-1.269.434-2.583-.523-2.564-1.862l.125-7.799c.006-.357-.108-.706-.322-.992l-4.685-6.235c-.804-1.074-.301-2.62.981-3.014l7.453-2.292c.341-.105.638-.321.844-.613l4.484-6.382c.772-1.097 2.398-1.097 3.168 0l4.484 6.382c.205.292.502.508.844.613l7.454 2.292c1.281.394 1.783 1.94.978 3.014z"/>
+            </g>
+        </g>
+    </g>
+</svg>

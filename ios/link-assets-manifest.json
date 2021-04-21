@@ -1,0 +1,61 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Sailec/sailec_black.otf",
+      "sha1": "c9e32eb770533232af422636e3243a730990880a"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_black_italic.otf",
+      "sha1": "f4fbcb924cc9624cff909966cc7176d7658cbcf2"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_bold.otf",
+      "sha1": "b1f9a98bf25e026d0d70c155f3cf92971bdd57eb"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_bold_italic.otf",
+      "sha1": "325d7a1a87e1de02297ad5509c98559327c88a60"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_hairline.otf",
+      "sha1": "246585bbb35b2863268103fbfb76ee5972790380"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_hairline_italic.otf",
+      "sha1": "9c6074478defefe3ab6bd87d78738ca5dd8dadb0"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_light.otf",
+      "sha1": "2d5738106fb8272a830e29aa13f8ffe93f6dd2fb"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_light_italic.otf",
+      "sha1": "4ae4f0cb80e39dda62726a60e6a32ae22278c243"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_medium.otf",
+      "sha1": "c3314f558fab78cea1f10d25531817a055bdae6e"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_medium_italic.otf",
+      "sha1": "980bf96c41e778f3139485ce8e503a8922ef18cd"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_regular.otf",
+      "sha1": "039392ffe59397fd06d9db27bc591a97e85e8711"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_regular_italic.otf",
+      "sha1": "8f0893d2ff71cc4940218ba367faf8aa31bb0454"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_thin.otf",
+      "sha1": "f5da6bc0b1a82a45519d10fdfbe0c2af696c638c"
+    },
+    {
+      "path": "src/assets/fonts/Sailec/sailec_thin_italic.otf",
+      "sha1": "72438c82eff3a73fcf17bb636ae85cd1624badb9"
+    }
+  ]
+}
