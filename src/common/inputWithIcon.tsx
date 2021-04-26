@@ -26,7 +26,7 @@ const style = StyleSheet.create({
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
     backgroundColor: colors.inputColor,
-    fontFamily: 'sailec_regular',
+    fontFamily: 'Sailec',
     fontSize: 13,
   },
 

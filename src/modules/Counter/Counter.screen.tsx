@@ -78,12 +78,12 @@ const style = StyleSheet.create({
     marginBottom: 30,
   },
   counterText: {
-    fontFamily: 'sailec_black',
+    fontFamily: 'Sailec Black',
     fontSize: 30,
     includeFontPadding: false,
   },
   counterSubText: {
-    fontFamily: 'sailec_bold',
+    fontFamily: 'Sailec Bold',
     fontSize: 15,
     color: '#69768d',
     includeFontPadding: false,

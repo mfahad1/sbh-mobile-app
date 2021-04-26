@@ -152,12 +152,12 @@ const style = StyleSheet.create({
     marginBottom: 120,
   },
   infoStats: {
-    fontFamily: 'sailec_black',
+    fontFamily: 'Sailec Black',
     fontSize: 55,
     color: '#ffff',
   },
   infoParam: {
-    fontFamily: 'sailec_bold',
+    fontFamily: 'Sailec Bold',
     fontSize: 15,
     color: '#ffff',
   },

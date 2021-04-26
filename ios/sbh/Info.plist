@@ -39,6 +39,23 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>sailec_thin_italic.otf</string>
+		<string>sailec_light_italic.otf</string>
+		<string>sailec_regular_italic.otf</string>
+		<string>sailec_bold_italic.otf</string>
+		<string>sailec_regular.otf</string>
+		<string>sailec_medium_italic.otf</string>
+		<string>sailec_bold.otf</string>
+		<string>sailec_thin.otf</string>
+		<string>sailec_hairline.otf</string>
+		<string>sailec_black.otf</string>
+		<string>sailec_hairline_italic.otf</string>
+		<string>sailec_black_italic.otf</string>
+		<string>sailec_medium.otf</string>
+		<string>sailec_light.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -48,54 +65,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Sailec Black Italic.otf</string>
-		<string>Sailec Black.otf</string>
-		<string>Sailec Bold Italic.otf</string>
-		<string>Sailec Bold.otf</string>
-		<string>Sailec Hairline Italic.otf</string>
-		<string>Sailec Hairline.otf</string>
-		<string>Sailec Light Italic.otf</string>
-		<string>Sailec Light.otf</string>
-		<string>Sailec Medium Italic.otf</string>
-		<string>Sailec Medium.otf</string>
-		<string>Sailec Regular Italic.otf</string>
-		<string>Sailec Regular.otf</string>
-		<string>Sailec Thin Italic.otf</string>
-		<string>Sailec Thin.otf</string>
-		<string>Sailec_Black_Italic.otf</string>
-		<string>Sailec_Black.otf</string>
-		<string>Sailec_Bold_Italic.otf</string>
-		<string>Sailec_Bold.otf</string>
-		<string>Sailec_Hairline_Italic.otf</string>
-		<string>Sailec_Hairline.otf</string>
-		<string>Sailec_Light_Italic.otf</string>
-		<string>Sailec_Light.otf</string>
-		<string>Sailec_Medium_Italic.otf</string>
-		<string>Sailec_Medium.otf</string>
-		<string>Sailec_Regular_Italic.otf</string>
-		<string>Sailec_Regular.otf</string>
-		<string>Sailec_Thin_Italic.otf</string>
-		<string>Sailec_Thin.otf</string>
-		<string>sailec_black_italic.otf</string>
-		<string>sailec_black.otf</string>
-		<string>sailec_bold_italic.otf</string>
-		<string>sailec_hairline_italic.otf</string>
-		<string>sailec_hairline.otf</string>
-		<string>sailec_light_italic.otf</string>
-		<string>sailec_light.otf</string>
-		<string>sailec_medium_italic.otf</string>
-		<string>sailec_medium.otf</string>
-		<string>sailec_regular_italic.otf</string>
-		<string>sailec_regular.otf</string>
-		<string>sailec_thin_italic.otf</string>
-		<string>sailec_thin.otf</string>
-	</array>
 </dict>
 </plist>

@@ -3,66 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* sbhTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sbhTests.m */; };
-		04700F726D7943E89B7573DD /* Sailec_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3571E672D64F47F49E8EFD32 /* Sailec_Bold.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		152284B340994FA3BB9FAA0B /* Sailec_Thin_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25FDA0D6927043759E015B26 /* Sailec_Thin_Italic.otf */; };
-		268BF16C49424C4A9AD1F8C8 /* Sailec Hairline Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64D4AC1A8DB34956AD2A53EF /* Sailec Hairline Italic.otf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* sbhTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sbhTests.m */; };
-		31951EAEE3C44704B7DE962C /* Sailec_Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1E087C8CD444D89A0979FCA /* Sailec_Black.otf */; };
 		345F4F4E898946098A377643 /* sailec_thin_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFA0DD2A40324C878F8FFDFC /* sailec_thin_italic.otf */; };
 		39CCA599085249F9B3EF779D /* sailec_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A765C5A662D4E0684D7DC77 /* sailec_thin.otf */; };
-		3A53FC5B141B4739BA8C705F /* Sailec_Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018862C4B28040A8A6932349 /* Sailec_Thin.otf */; };
-		3E9DAC51308B40B59AAAEE32 /* Sailec_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5AD57ABC360473088FEBFD6 /* Sailec_Regular_Italic.otf */; };
-		3FA6B82C7B6A4D5E8653B255 /* Sailec_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05CD31CE1A844B0B9C1051A6 /* Sailec_Light.otf */; };
 		3FF42F319C4D4C0D9B6AB974 /* sailec_regular_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C674C3E13174710809B4981 /* sailec_regular_italic.otf */; };
-		516F1D1201B04DF1917B38B4 /* Sailec_Black_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283FA00ED2154BBBA3A07700 /* Sailec_Black_Italic.otf */; };
-		51FA01DB1C3145E4973D6B44 /* Sailec_Light_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7E36F3E74C908B5CD41D /* Sailec_Light_Italic.otf */; };
 		56091BF6C2C3491792AAFBD7 /* sailec_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDFA91C82AC8496C86B9E6C6 /* sailec_regular.otf */; };
 		5B5FEAE81A894E86ADC96CDC /* sailec_hairline_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D764BE3061B4657BC62DDC2 /* sailec_hairline_italic.otf */; };
-		5CD3C9A174A848488A09FAA4 /* Sailec Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D81B74C1CCA491D856B5C85 /* Sailec Medium.otf */; };
+		5C2B2AF5BF53517363EDD374 /* libPods-sbh-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F64FFB60944D90A2CE2F86 /* libPods-sbh-tvOSTests.a */; };
 		600E0A78CAC543439183D361 /* sailec_bold_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9028D531D0C403FAE606EED /* sailec_bold_italic.otf */; };
-		61D3544DD7244AC58D1D141E /* Sailec Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F171B455DDC546E6A29CDBD1 /* Sailec Bold Italic.otf */; };
-		65812ACD2580479E81EF5C58 /* Sailec_Bold_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1D26A4087C04541A471AC2D /* Sailec_Bold_Italic.otf */; };
-		6A95633AE62741FD874F0EB4 /* Sailec Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E0D675641549F8AC08CFF1 /* Sailec Black.otf */; };
 		6C3C0A2EE3744146A110A128 /* sailec_light_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8D53D15FBD3C4DC88059048D /* sailec_light_italic.otf */; };
-		70D59229263609CD00F51FF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
+		70764E9D2637340800B589C8 /* sailec_thin_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E8F2637340800B589C8 /* sailec_thin_italic.otf */; };
+		70764E9E2637340800B589C8 /* sailec_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E902637340800B589C8 /* sailec_medium.otf */; };
+		70764E9F2637340800B589C8 /* sailec_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E912637340800B589C8 /* sailec_light.otf */; };
+		70764EA02637340800B589C8 /* sailec_light_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E922637340800B589C8 /* sailec_light_italic.otf */; };
+		70764EA12637340800B589C8 /* sailec_regular_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E932637340800B589C8 /* sailec_regular_italic.otf */; };
+		70764EA22637340800B589C8 /* sailec_bold_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E942637340800B589C8 /* sailec_bold_italic.otf */; };
+		70764EA32637340800B589C8 /* sailec_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E952637340800B589C8 /* sailec_regular.otf */; };
+		70764EA42637340800B589C8 /* sailec_medium_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E962637340800B589C8 /* sailec_medium_italic.otf */; };
+		70764EA52637340800B589C8 /* sailec_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E972637340800B589C8 /* sailec_bold.otf */; };
+		70764EA62637340800B589C8 /* sailec_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E982637340800B589C8 /* sailec_thin.otf */; };
+		70764EA72637340800B589C8 /* sailec_hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E992637340800B589C8 /* sailec_hairline.otf */; };
+		70764EA82637340800B589C8 /* sailec_black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E9A2637340800B589C8 /* sailec_black.otf */; };
+		70764EA92637340800B589C8 /* sailec_hairline_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E9B2637340800B589C8 /* sailec_hairline_italic.otf */; };
+		70764EAA2637340800B589C8 /* sailec_black_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70764E9C2637340800B589C8 /* sailec_black_italic.otf */; };
+		74616515D84DE7DD96E5646C /* libPods-sbh-sbhTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15442CF0E76B969295F6F859 /* libPods-sbh-sbhTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		894EC5EF87094799936114F9 /* Sailec_Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40A2E7A8717940798112A7CB /* Sailec_Hairline.otf */; };
-		896AEB77BEE84EC2B23A4FEB /* Sailec Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D463DFDEBA58458FB028D9B6 /* Sailec Black Italic.otf */; };
 		8F465A79A7B24A6881336A73 /* sailec_hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7204B5A84280A57768AD /* sailec_hairline.otf */; };
+		9C2219E131E4D5952AED87F6 /* libPods-sbh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058C36F2BB9394E3DE19EFF0 /* libPods-sbh.a */; };
+		A4414804ECDF877A820EA0C0 /* libPods-sbh-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AF1DF8F13A08CAD54A79F5 /* libPods-sbh-tvOS.a */; };
 		A5F1DE4588FA44C18C8FB459 /* sailec_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F43FEAB8B124406FA6DFA79C /* sailec_bold.otf */; };
-		AAAB5445604E63CF4F7BA6FE /* libPods-sbh-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656DA1B605B9AA2460BC1C91 /* libPods-sbh-tvOS.a */; };
-		AFDD7C62A4E64EC49E4536B4 /* Sailec_Medium_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA3523772D474D92AEA7104A /* Sailec_Medium_Italic.otf */; };
-		B0A9BA1E03134F219023224E /* Sailec Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 955382B62EE1476090B75A3A /* Sailec Medium Italic.otf */; };
-		B9CA5A74A2BB4772A879E17D /* Sailec_Hairline_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4430B6398DF40469E2CEA63 /* Sailec_Hairline_Italic.otf */; };
 		BBE9B74742A947A1940ABB6B /* sailec_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5050F19BEC624410A04CF4A1 /* sailec_medium.otf */; };
-		BE3BBD038A8240699084EC26 /* Sailec Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75894A2FD3C4135AAB07F4C /* Sailec Thin.otf */; };
-		BF96749E35DA6F74342F431F /* libPods-sbh-sbhTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00A23EC96EEC96BCB833FD1 /* libPods-sbh-sbhTests.a */; };
 		BFCF0E2698BE48CAB1C739D5 /* sailec_medium_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74869BB2D2984C6A85F983C7 /* sailec_medium_italic.otf */; };
-		BFD6F1741E8F49D8964FA8D3 /* Sailec Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A5236D82538484C9889538B /* Sailec Regular.otf */; };
-		C87CDF7F62404F1EB643A623 /* Sailec Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A7A5AC75FD49AAA01B0A07 /* Sailec Thin Italic.otf */; };
-		CD5CE5BDED9E99E77E0A1054 /* libPods-sbh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D002503E63C339956E814432 /* libPods-sbh.a */; };
 		D38ADC7AE0D546E297E97457 /* sailec_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20788CDAF4D04C2C98DA57BD /* sailec_light.otf */; };
-		D61E5F0C71434AD0AD2E2B47 /* Sailec_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A7472D343478B83338F76 /* Sailec_Medium.otf */; };
-		D6EC64FADA744D789AF0259F /* Sailec Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82429A09580F48C0A2FFF5F2 /* Sailec Light Italic.otf */; };
 		E07A08B72C5D4D4CB3ABA281 /* sailec_black_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 483919A2440748ACA0E91777 /* sailec_black_italic.otf */; };
-		E0E002B5723746F3BF247D97 /* Sailec Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9740B489C1444CBB52842B /* Sailec Light.otf */; };
-		E1B4404D9B9292EC21C734C3 /* libPods-sbh-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5BDE296BD5F5B679FF238E /* libPods-sbh-tvOSTests.a */; };
 		ECDA6758B5954F3CA06F36A0 /* sailec_black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 16150F86E8CB48C0B7C25DC8 /* sailec_black.otf */; };
-		EF3E7F0271F24C77AB24CE3F /* Sailec Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD6DF840B884B6696FBAB25 /* Sailec Regular Italic.otf */; };
-		F1206852B6DC42DD910CEB1F /* Sailec Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CC0252028184635A4EFBB45 /* Sailec Hairline.otf */; };
-		F4B6B5B66F77424AAFE37CBC /* Sailec_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD4AFC1617F14472BCFDB1D1 /* Sailec_Regular.otf */; };
-		F7144A44FDA24359B7751EB8 /* Sailec Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB342980C7490FB265D028 /* Sailec Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,69 +72,69 @@
 		00E356EE1AD99517003FC87E /* sbhTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sbhTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F21AD99517003FC87E /* sbhTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sbhTests.m; sourceTree = "<group>"; };
 		018862C4B28040A8A6932349 /* Sailec_Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Thin.otf; path = ../src/assets/fonts/Sailec/Sailec_Thin.otf; sourceTree = "<group>"; };
+		058C36F2BB9394E3DE19EFF0 /* libPods-sbh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CD31CE1A844B0B9C1051A6 /* Sailec_Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Light.otf; path = ../src/assets/fonts/Sailec/Sailec_Light.otf; sourceTree = "<group>"; };
-		05E0D675641549F8AC08CFF1 /* Sailec Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Black.otf"; path = "../src/assets/fonts/Sailec/Sailec Black.otf"; sourceTree = "<group>"; };
-		0ED8B40C0EC6A8D6D9A56901 /* Pods-sbh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh.release.xcconfig"; path = "Target Support Files/Pods-sbh/Pods-sbh.release.xcconfig"; sourceTree = "<group>"; };
+		12037065744E37706D07D8C7 /* Pods-sbh-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-sbh-tvOSTests/Pods-sbh-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* sbh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sbh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = sbh/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = sbh/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = sbh/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = sbh/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = sbh/main.m; sourceTree = "<group>"; };
+		15442CF0E76B969295F6F859 /* libPods-sbh-sbhTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-sbhTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16150F86E8CB48C0B7C25DC8 /* sailec_black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_black.otf; path = ../src/assets/fonts/Sailec/sailec_black.otf; sourceTree = "<group>"; };
-		1A5236D82538484C9889538B /* Sailec Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Regular.otf"; path = "../src/assets/fonts/Sailec/Sailec Regular.otf"; sourceTree = "<group>"; };
 		20788CDAF4D04C2C98DA57BD /* sailec_light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_light.otf; path = ../src/assets/fonts/Sailec/sailec_light.otf; sourceTree = "<group>"; };
 		25FDA0D6927043759E015B26 /* Sailec_Thin_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Thin_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Thin_Italic.otf; sourceTree = "<group>"; };
 		267A7E36F3E74C908B5CD41D /* Sailec_Light_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Light_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Light_Italic.otf; sourceTree = "<group>"; };
 		283FA00ED2154BBBA3A07700 /* Sailec_Black_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Black_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Black_Italic.otf; sourceTree = "<group>"; };
-		2CC0252028184635A4EFBB45 /* Sailec Hairline.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Hairline.otf"; path = "../src/assets/fonts/Sailec/Sailec Hairline.otf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* sbh-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sbh-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* sbh-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sbh-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D81B74C1CCA491D856B5C85 /* Sailec Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Medium.otf"; path = "../src/assets/fonts/Sailec/Sailec Medium.otf"; sourceTree = "<group>"; };
-		3184DE1D8759997E1439807A /* Pods-sbh-sbhTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-sbhTests.release.xcconfig"; path = "Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests.release.xcconfig"; sourceTree = "<group>"; };
 		3571E672D64F47F49E8EFD32 /* Sailec_Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Bold.otf; path = ../src/assets/fonts/Sailec/Sailec_Bold.otf; sourceTree = "<group>"; };
-		3ECB342980C7490FB265D028 /* Sailec Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Bold.otf"; path = "../src/assets/fonts/Sailec/Sailec Bold.otf"; sourceTree = "<group>"; };
+		3ED94C9AE219FD134F79BCA6 /* Pods-sbh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh.release.xcconfig"; path = "Target Support Files/Pods-sbh/Pods-sbh.release.xcconfig"; sourceTree = "<group>"; };
 		40A2E7A8717940798112A7CB /* Sailec_Hairline.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Hairline.otf; path = ../src/assets/fonts/Sailec/Sailec_Hairline.otf; sourceTree = "<group>"; };
+		43EB79CE3300E7BC4A225A3B /* Pods-sbh-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOS.release.xcconfig"; path = "Target Support Files/Pods-sbh-tvOS/Pods-sbh-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		483919A2440748ACA0E91777 /* sailec_black_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_black_italic.otf; path = ../src/assets/fonts/Sailec/sailec_black_italic.otf; sourceTree = "<group>"; };
+		49BB450F6C9B0943208C2106 /* Pods-sbh-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-sbh-tvOS/Pods-sbh-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4C674C3E13174710809B4981 /* sailec_regular_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_regular_italic.otf; path = ../src/assets/fonts/Sailec/sailec_regular_italic.otf; sourceTree = "<group>"; };
 		5050F19BEC624410A04CF4A1 /* sailec_medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_medium.otf; path = ../src/assets/fonts/Sailec/sailec_medium.otf; sourceTree = "<group>"; };
-		54E0BE74C0A1FFBDFBB60199 /* Pods-sbh-sbhTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-sbhTests.debug.xcconfig"; path = "Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B0FE7776A7269792E6387B9 /* Pods-sbh-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-sbh-tvOS/Pods-sbh-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		64D4AC1A8DB34956AD2A53EF /* Sailec Hairline Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Hairline Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Hairline Italic.otf"; sourceTree = "<group>"; };
-		656DA1B605B9AA2460BC1C91 /* libPods-sbh-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D764BE3061B4657BC62DDC2 /* sailec_hairline_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_hairline_italic.otf; path = ../src/assets/fonts/Sailec/sailec_hairline_italic.otf; sourceTree = "<group>"; };
-		7284B1D1A2852A74FEC20499 /* Pods-sbh-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-sbh-tvOSTests/Pods-sbh-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70764E8F2637340800B589C8 /* sailec_thin_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_thin_italic.otf; sourceTree = "<group>"; };
+		70764E902637340800B589C8 /* sailec_medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_medium.otf; sourceTree = "<group>"; };
+		70764E912637340800B589C8 /* sailec_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_light.otf; sourceTree = "<group>"; };
+		70764E922637340800B589C8 /* sailec_light_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_light_italic.otf; sourceTree = "<group>"; };
+		70764E932637340800B589C8 /* sailec_regular_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_regular_italic.otf; sourceTree = "<group>"; };
+		70764E942637340800B589C8 /* sailec_bold_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_bold_italic.otf; sourceTree = "<group>"; };
+		70764E952637340800B589C8 /* sailec_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_regular.otf; sourceTree = "<group>"; };
+		70764E962637340800B589C8 /* sailec_medium_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_medium_italic.otf; sourceTree = "<group>"; };
+		70764E972637340800B589C8 /* sailec_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_bold.otf; sourceTree = "<group>"; };
+		70764E982637340800B589C8 /* sailec_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_thin.otf; sourceTree = "<group>"; };
+		70764E992637340800B589C8 /* sailec_hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_hairline.otf; sourceTree = "<group>"; };
+		70764E9A2637340800B589C8 /* sailec_black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_black.otf; sourceTree = "<group>"; };
+		70764E9B2637340800B589C8 /* sailec_hairline_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_hairline_italic.otf; sourceTree = "<group>"; };
+		70764E9C2637340800B589C8 /* sailec_black_italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sailec_black_italic.otf; sourceTree = "<group>"; };
 		74869BB2D2984C6A85F983C7 /* sailec_medium_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_medium_italic.otf; path = ../src/assets/fonts/Sailec/sailec_medium_italic.otf; sourceTree = "<group>"; };
+		755C10A31AC829FC7DEC82BA /* Pods-sbh-sbhTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-sbhTests.debug.xcconfig"; path = "Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A765C5A662D4E0684D7DC77 /* sailec_thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_thin.otf; path = ../src/assets/fonts/Sailec/sailec_thin.otf; sourceTree = "<group>"; };
-		7E5BDE296BD5F5B679FF238E /* libPods-sbh-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4A7472D343478B83338F76 /* Sailec_Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Medium.otf; path = ../src/assets/fonts/Sailec/Sailec_Medium.otf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = sbh/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		82429A09580F48C0A2FFF5F2 /* Sailec Light Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Light Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Light Italic.otf"; sourceTree = "<group>"; };
-		8C9740B489C1444CBB52842B /* Sailec Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Light.otf"; path = "../src/assets/fonts/Sailec/Sailec Light.otf"; sourceTree = "<group>"; };
+		81F64FFB60944D90A2CE2F86 /* libPods-sbh-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C68612FA9C0EC69792D7992 /* Pods-sbh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh.debug.xcconfig"; path = "Target Support Files/Pods-sbh/Pods-sbh.debug.xcconfig"; sourceTree = "<group>"; };
 		8D53D15FBD3C4DC88059048D /* sailec_light_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_light_italic.otf; path = ../src/assets/fonts/Sailec/sailec_light_italic.otf; sourceTree = "<group>"; };
-		955382B62EE1476090B75A3A /* Sailec Medium Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Medium Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Medium Italic.otf"; sourceTree = "<group>"; };
-		A00A23EC96EEC96BCB833FD1 /* libPods-sbh-sbhTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-sbhTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D26A4087C04541A471AC2D /* Sailec_Bold_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Bold_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Bold_Italic.otf; sourceTree = "<group>"; };
-		A7F4DA06E23866E4DEE62475 /* Pods-sbh-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-sbh-tvOSTests/Pods-sbh-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A9028D531D0C403FAE606EED /* sailec_bold_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_bold_italic.otf; path = ../src/assets/fonts/Sailec/sailec_bold_italic.otf; sourceTree = "<group>"; };
 		AD4AFC1617F14472BCFDB1D1 /* Sailec_Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Regular.otf; path = ../src/assets/fonts/Sailec/Sailec_Regular.otf; sourceTree = "<group>"; };
-		B75894A2FD3C4135AAB07F4C /* Sailec Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Thin.otf"; path = "../src/assets/fonts/Sailec/Sailec Thin.otf"; sourceTree = "<group>"; };
 		BA3523772D474D92AEA7104A /* Sailec_Medium_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Medium_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Medium_Italic.otf; sourceTree = "<group>"; };
 		BFA0DD2A40324C878F8FFDFC /* sailec_thin_italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_thin_italic.otf; path = ../src/assets/fonts/Sailec/sailec_thin_italic.otf; sourceTree = "<group>"; };
-		C914885750A6D1C614DB29BD /* Pods-sbh-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOS.release.xcconfig"; path = "Target Support Files/Pods-sbh-tvOS/Pods-sbh-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		D002503E63C339956E814432 /* libPods-sbh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A7A5AC75FD49AAA01B0A07 /* Sailec Thin Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Thin Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Thin Italic.otf"; sourceTree = "<group>"; };
+		C1AF1DF8F13A08CAD54A79F5 /* libPods-sbh-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sbh-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E087C8CD444D89A0979FCA /* Sailec_Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Black.otf; path = ../src/assets/fonts/Sailec/Sailec_Black.otf; sourceTree = "<group>"; };
-		D463DFDEBA58458FB028D9B6 /* Sailec Black Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Black Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Black Italic.otf"; sourceTree = "<group>"; };
 		D5AD57ABC360473088FEBFD6 /* Sailec_Regular_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Regular_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Regular_Italic.otf; sourceTree = "<group>"; };
-		D64CC19B66B5727CB8B6F924 /* Pods-sbh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh.debug.xcconfig"; path = "Target Support Files/Pods-sbh/Pods-sbh.debug.xcconfig"; sourceTree = "<group>"; };
 		E4430B6398DF40469E2CEA63 /* Sailec_Hairline_Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Sailec_Hairline_Italic.otf; path = ../src/assets/fonts/Sailec/Sailec_Hairline_Italic.otf; sourceTree = "<group>"; };
+		E9331A7B13F004EA77A84A8E /* Pods-sbh-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-sbh-tvOSTests/Pods-sbh-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EDD6DF840B884B6696FBAB25 /* Sailec Regular Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Regular Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Regular Italic.otf"; sourceTree = "<group>"; };
 		EDFA91C82AC8496C86B9E6C6 /* sailec_regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_regular.otf; path = ../src/assets/fonts/Sailec/sailec_regular.otf; sourceTree = "<group>"; };
-		F171B455DDC546E6A29CDBD1 /* Sailec Bold Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sailec Bold Italic.otf"; path = "../src/assets/fonts/Sailec/Sailec Bold Italic.otf"; sourceTree = "<group>"; };
 		F43FEAB8B124406FA6DFA79C /* sailec_bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_bold.otf; path = ../src/assets/fonts/Sailec/sailec_bold.otf; sourceTree = "<group>"; };
+		F620871D3941817D0BD39AA2 /* Pods-sbh-sbhTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sbh-sbhTests.release.xcconfig"; path = "Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6AA7204B5A84280A57768AD /* sailec_hairline.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = sailec_hairline.otf; path = ../src/assets/fonts/Sailec/sailec_hairline.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF96749E35DA6F74342F431F /* libPods-sbh-sbhTests.a in Frameworks */,
+				74616515D84DE7DD96E5646C /* libPods-sbh-sbhTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5CE5BDED9E99E77E0A1054 /* libPods-sbh.a in Frameworks */,
+				9C2219E131E4D5952AED87F6 /* libPods-sbh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAB5445604E63CF4F7BA6FE /* libPods-sbh-tvOS.a in Frameworks */,
+				A4414804ECDF877A820EA0C0 /* libPods-sbh-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B4404D9B9292EC21C734C3 /* libPods-sbh-tvOSTests.a in Frameworks */,
+				5C2B2AF5BF53517363EDD374 /* libPods-sbh-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,20 +193,6 @@
 		0BEFC6DAC9DC435CB77F9730 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D463DFDEBA58458FB028D9B6 /* Sailec Black Italic.otf */,
-				05E0D675641549F8AC08CFF1 /* Sailec Black.otf */,
-				F171B455DDC546E6A29CDBD1 /* Sailec Bold Italic.otf */,
-				3ECB342980C7490FB265D028 /* Sailec Bold.otf */,
-				64D4AC1A8DB34956AD2A53EF /* Sailec Hairline Italic.otf */,
-				2CC0252028184635A4EFBB45 /* Sailec Hairline.otf */,
-				82429A09580F48C0A2FFF5F2 /* Sailec Light Italic.otf */,
-				8C9740B489C1444CBB52842B /* Sailec Light.otf */,
-				955382B62EE1476090B75A3A /* Sailec Medium Italic.otf */,
-				2D81B74C1CCA491D856B5C85 /* Sailec Medium.otf */,
-				EDD6DF840B884B6696FBAB25 /* Sailec Regular Italic.otf */,
-				1A5236D82538484C9889538B /* Sailec Regular.otf */,
-				D0A7A5AC75FD49AAA01B0A07 /* Sailec Thin Italic.otf */,
-				B75894A2FD3C4135AAB07F4C /* Sailec Thin.otf */,
 				283FA00ED2154BBBA3A07700 /* Sailec_Black_Italic.otf */,
 				D1E087C8CD444D89A0979FCA /* Sailec_Black.otf */,
 				A1D26A4087C04541A471AC2D /* Sailec_Bold_Italic.otf */,
@@ -257,6 +228,7 @@
 		13B07FAE1A68108700A75B9A /* sbh */ = {
 			isa = PBXGroup;
 			children = (
+				70764E8E2637340800B589C8 /* Sailec */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -273,12 +245,34 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				D002503E63C339956E814432 /* libPods-sbh.a */,
-				A00A23EC96EEC96BCB833FD1 /* libPods-sbh-sbhTests.a */,
-				656DA1B605B9AA2460BC1C91 /* libPods-sbh-tvOS.a */,
-				7E5BDE296BD5F5B679FF238E /* libPods-sbh-tvOSTests.a */,
+				058C36F2BB9394E3DE19EFF0 /* libPods-sbh.a */,
+				15442CF0E76B969295F6F859 /* libPods-sbh-sbhTests.a */,
+				C1AF1DF8F13A08CAD54A79F5 /* libPods-sbh-tvOS.a */,
+				81F64FFB60944D90A2CE2F86 /* libPods-sbh-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70764E8E2637340800B589C8 /* Sailec */ = {
+			isa = PBXGroup;
+			children = (
+				70764E8F2637340800B589C8 /* sailec_thin_italic.otf */,
+				70764E902637340800B589C8 /* sailec_medium.otf */,
+				70764E912637340800B589C8 /* sailec_light.otf */,
+				70764E922637340800B589C8 /* sailec_light_italic.otf */,
+				70764E932637340800B589C8 /* sailec_regular_italic.otf */,
+				70764E942637340800B589C8 /* sailec_bold_italic.otf */,
+				70764E952637340800B589C8 /* sailec_regular.otf */,
+				70764E962637340800B589C8 /* sailec_medium_italic.otf */,
+				70764E972637340800B589C8 /* sailec_bold.otf */,
+				70764E982637340800B589C8 /* sailec_thin.otf */,
+				70764E992637340800B589C8 /* sailec_hairline.otf */,
+				70764E9A2637340800B589C8 /* sailec_black.otf */,
+				70764E9B2637340800B589C8 /* sailec_hairline_italic.otf */,
+				70764E9C2637340800B589C8 /* sailec_black_italic.otf */,
+			);
+			name = Sailec;
+			path = ../src/assets/fonts/Sailec;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -318,14 +312,14 @@
 		A74F8DBC4D0BC19484DBF6CF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D64CC19B66B5727CB8B6F924 /* Pods-sbh.debug.xcconfig */,
-				0ED8B40C0EC6A8D6D9A56901 /* Pods-sbh.release.xcconfig */,
-				54E0BE74C0A1FFBDFBB60199 /* Pods-sbh-sbhTests.debug.xcconfig */,
-				3184DE1D8759997E1439807A /* Pods-sbh-sbhTests.release.xcconfig */,
-				5B0FE7776A7269792E6387B9 /* Pods-sbh-tvOS.debug.xcconfig */,
-				C914885750A6D1C614DB29BD /* Pods-sbh-tvOS.release.xcconfig */,
-				7284B1D1A2852A74FEC20499 /* Pods-sbh-tvOSTests.debug.xcconfig */,
-				A7F4DA06E23866E4DEE62475 /* Pods-sbh-tvOSTests.release.xcconfig */,
+				8C68612FA9C0EC69792D7992 /* Pods-sbh.debug.xcconfig */,
+				3ED94C9AE219FD134F79BCA6 /* Pods-sbh.release.xcconfig */,
+				755C10A31AC829FC7DEC82BA /* Pods-sbh-sbhTests.debug.xcconfig */,
+				F620871D3941817D0BD39AA2 /* Pods-sbh-sbhTests.release.xcconfig */,
+				49BB450F6C9B0943208C2106 /* Pods-sbh-tvOS.debug.xcconfig */,
+				43EB79CE3300E7BC4A225A3B /* Pods-sbh-tvOS.release.xcconfig */,
+				12037065744E37706D07D8C7 /* Pods-sbh-tvOSTests.debug.xcconfig */,
+				E9331A7B13F004EA77A84A8E /* Pods-sbh-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -337,12 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "sbhTests" */;
 			buildPhases = (
-				4204A167E9760A511C80BA64 /* [CP] Check Pods Manifest.lock */,
+				11769ED1AF5DE62A8A17E43B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				218ABCE8F7C9154140F12749 /* [CP] Embed Pods Frameworks */,
-				FC908D7AFF41ACBE549A55A1 /* [CP] Copy Pods Resources */,
+				17B782415A24545ABCE677C6 /* [CP] Embed Pods Frameworks */,
+				0187F539873657C8BD82E997 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,14 +352,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "sbh" */;
 			buildPhases = (
-				E2E4F97B5E2AFEA044BCAC3C /* [CP] Check Pods Manifest.lock */,
+				384D323CA9604D1D5679F5E8 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				34FC7A7CCF748C1AEB09E6AA /* [CP] Embed Pods Frameworks */,
-				3467D6D5BE5BB7D58E575755 /* [CP] Copy Pods Resources */,
+				18D1172EBA012D5EA19D574A /* [CP] Embed Pods Frameworks */,
+				1508B3B75924D6533175D24A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,7 +374,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "sbh-tvOS" */;
 			buildPhases = (
-				97B1096BC32CAE6AEF500865 /* [CP] Check Pods Manifest.lock */,
+				D8F79A331E2DC9B56969BDF1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -400,7 +394,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "sbh-tvOSTests" */;
 			buildPhases = (
-				DB68318B7191D7664FC41161 /* [CP] Check Pods Manifest.lock */,
+				E976D2A3489D232F9B3C5F48 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -476,50 +470,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				70764EA72637340800B589C8 /* sailec_hairline.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				896AEB77BEE84EC2B23A4FEB /* Sailec Black Italic.otf in Resources */,
-				6A95633AE62741FD874F0EB4 /* Sailec Black.otf in Resources */,
-				61D3544DD7244AC58D1D141E /* Sailec Bold Italic.otf in Resources */,
-				F7144A44FDA24359B7751EB8 /* Sailec Bold.otf in Resources */,
-				268BF16C49424C4A9AD1F8C8 /* Sailec Hairline Italic.otf in Resources */,
-				F1206852B6DC42DD910CEB1F /* Sailec Hairline.otf in Resources */,
-				D6EC64FADA744D789AF0259F /* Sailec Light Italic.otf in Resources */,
-				E0E002B5723746F3BF247D97 /* Sailec Light.otf in Resources */,
-				B0A9BA1E03134F219023224E /* Sailec Medium Italic.otf in Resources */,
-				5CD3C9A174A848488A09FAA4 /* Sailec Medium.otf in Resources */,
-				EF3E7F0271F24C77AB24CE3F /* Sailec Regular Italic.otf in Resources */,
-				BFD6F1741E8F49D8964FA8D3 /* Sailec Regular.otf in Resources */,
-				C87CDF7F62404F1EB643A623 /* Sailec Thin Italic.otf in Resources */,
-				BE3BBD038A8240699084EC26 /* Sailec Thin.otf in Resources */,
-				516F1D1201B04DF1917B38B4 /* Sailec_Black_Italic.otf in Resources */,
-				31951EAEE3C44704B7DE962C /* Sailec_Black.otf in Resources */,
-				65812ACD2580479E81EF5C58 /* Sailec_Bold_Italic.otf in Resources */,
-				04700F726D7943E89B7573DD /* Sailec_Bold.otf in Resources */,
-				B9CA5A74A2BB4772A879E17D /* Sailec_Hairline_Italic.otf in Resources */,
-				894EC5EF87094799936114F9 /* Sailec_Hairline.otf in Resources */,
-				51FA01DB1C3145E4973D6B44 /* Sailec_Light_Italic.otf in Resources */,
-				3FA6B82C7B6A4D5E8653B255 /* Sailec_Light.otf in Resources */,
-				AFDD7C62A4E64EC49E4536B4 /* Sailec_Medium_Italic.otf in Resources */,
-				D61E5F0C71434AD0AD2E2B47 /* Sailec_Medium.otf in Resources */,
-				3E9DAC51308B40B59AAAEE32 /* Sailec_Regular_Italic.otf in Resources */,
-				F4B6B5B66F77424AAFE37CBC /* Sailec_Regular.otf in Resources */,
-				152284B340994FA3BB9FAA0B /* Sailec_Thin_Italic.otf in Resources */,
-				3A53FC5B141B4739BA8C705F /* Sailec_Thin.otf in Resources */,
 				E07A08B72C5D4D4CB3ABA281 /* sailec_black_italic.otf in Resources */,
 				ECDA6758B5954F3CA06F36A0 /* sailec_black.otf in Resources */,
+				70764EA12637340800B589C8 /* sailec_regular_italic.otf in Resources */,
 				600E0A78CAC543439183D361 /* sailec_bold_italic.otf in Resources */,
 				A5F1DE4588FA44C18C8FB459 /* sailec_bold.otf in Resources */,
+				70764EA22637340800B589C8 /* sailec_bold_italic.otf in Resources */,
+				70764EA32637340800B589C8 /* sailec_regular.otf in Resources */,
+				70764EAA2637340800B589C8 /* sailec_black_italic.otf in Resources */,
 				5B5FEAE81A894E86ADC96CDC /* sailec_hairline_italic.otf in Resources */,
 				8F465A79A7B24A6881336A73 /* sailec_hairline.otf in Resources */,
+				70764EA62637340800B589C8 /* sailec_thin.otf in Resources */,
 				6C3C0A2EE3744146A110A128 /* sailec_light_italic.otf in Resources */,
 				D38ADC7AE0D546E297E97457 /* sailec_light.otf in Resources */,
-				70D59229263609CD00F51FF2 /* Info.plist in Resources */,
+				70764EA42637340800B589C8 /* sailec_medium_italic.otf in Resources */,
+				70764E9F2637340800B589C8 /* sailec_light.otf in Resources */,
 				BFCF0E2698BE48CAB1C739D5 /* sailec_medium_italic.otf in Resources */,
 				BBE9B74742A947A1940ABB6B /* sailec_medium.otf in Resources */,
 				3FF42F319C4D4C0D9B6AB974 /* sailec_regular_italic.otf in Resources */,
+				70764EA92637340800B589C8 /* sailec_hairline_italic.otf in Resources */,
 				56091BF6C2C3491792AAFBD7 /* sailec_regular.otf in Resources */,
 				345F4F4E898946098A377643 /* sailec_thin_italic.otf in Resources */,
 				39CCA599085249F9B3EF779D /* sailec_thin.otf in Resources */,
+				70764E9D2637340800B589C8 /* sailec_thin_italic.otf in Resources */,
+				70764EA82637340800B589C8 /* sailec_black.otf in Resources */,
+				70764E9E2637340800B589C8 /* sailec_medium.otf in Resources */,
+				70764EA52637340800B589C8 /* sailec_bold.otf in Resources */,
+				70764EA02637340800B589C8 /* sailec_light_italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +522,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -553,47 +532,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		218ABCE8F7C9154140F12749 /* [CP] Embed Pods Frameworks */ = {
+		0187F539873657C8BD82E997 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		3467D6D5BE5BB7D58E575755 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -602,28 +549,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		34FC7A7CCF748C1AEB09E6AA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4204A167E9760A511C80BA64 /* [CP] Check Pods Manifest.lock */ = {
+		11769ED1AF5DE62A8A17E43B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -645,51 +574,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97B1096BC32CAE6AEF500865 /* [CP] Check Pods Manifest.lock */ = {
+		1508B3B75924D6533175D24A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"",
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sbh-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB68318B7191D7664FC41161 /* [CP] Check Pods Manifest.lock */ = {
+		17B782415A24545ABCE677C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sbh-tvOSTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2E4F97B5E2AFEA044BCAC3C /* [CP] Check Pods Manifest.lock */ = {
+		18D1172EBA012D5EA19D574A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		384D323CA9604D1D5679F5E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -711,27 +666,53 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC908D7AFF41ACBE549A55A1 /* [CP] Copy Pods Resources */ = {
+		D8F79A331E2DC9B56969BDF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-sbh-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sbh-sbhTests/Pods-sbh-sbhTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E976D2A3489D232F9B3C5F48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sbh-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -822,7 +803,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54E0BE74C0A1FFBDFBB60199 /* Pods-sbh-sbhTests.debug.xcconfig */;
+			baseConfigurationReference = 755C10A31AC829FC7DEC82BA /* Pods-sbh-sbhTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -831,7 +812,11 @@
 				);
 				INFOPLIST_FILE = sbhTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -845,13 +830,17 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3184DE1D8759997E1439807A /* Pods-sbh-sbhTests.release.xcconfig */;
+			baseConfigurationReference = F620871D3941817D0BD39AA2 /* Pods-sbh-sbhTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = sbhTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -865,7 +854,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D64CC19B66B5727CB8B6F924 /* Pods-sbh.debug.xcconfig */;
+			baseConfigurationReference = 8C68612FA9C0EC69792D7992 /* Pods-sbh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -873,7 +862,10 @@
 				DEVELOPMENT_TEAM = RX8UNCQPUW;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = sbh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -889,14 +881,17 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ED8B40C0EC6A8D6D9A56901 /* Pods-sbh.release.xcconfig */;
+			baseConfigurationReference = 3ED94C9AE219FD134F79BCA6 /* Pods-sbh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RX8UNCQPUW;
 				INFOPLIST_FILE = sbh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -911,7 +906,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0FE7776A7269792E6387B9 /* Pods-sbh-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 49BB450F6C9B0943208C2106 /* Pods-sbh-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -923,7 +918,10 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -939,7 +937,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C914885750A6D1C614DB29BD /* Pods-sbh-tvOS.release.xcconfig */;
+			baseConfigurationReference = 43EB79CE3300E7BC4A225A3B /* Pods-sbh-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -951,7 +949,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -967,7 +968,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7284B1D1A2852A74FEC20499 /* Pods-sbh-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 12037065744E37706D07D8C7 /* Pods-sbh-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -978,7 +979,11 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -994,7 +999,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7F4DA06E23866E4DEE62475 /* Pods-sbh-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = E9331A7B13F004EA77A84A8E /* Pods-sbh-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1005,7 +1010,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1067,7 +1076,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -1120,7 +1132,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",

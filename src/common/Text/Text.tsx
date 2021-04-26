@@ -47,27 +47,27 @@ export default function AppText({
 
 const style = StyleSheet.create({
   regular: {
-    fontFamily: 'sailec_regular',
+    fontFamily: 'Sailec',
     fontSize: adjust(15),
   },
   bold: {
-    fontFamily: 'sailec_bold',
+    fontFamily: 'Sailec Bold',
     fontSize: adjust(15),
   },
   medium: {
-    fontFamily: 'sailec_medium',
+    fontFamily: 'Sailec Medium',
     fontSize: adjust(15),
   },
   black: {
-    fontFamily: 'sailec_black',
+    fontFamily: 'Sailec Black',
     fontSize: adjust(15),
   },
   italic: {
-    fontFamily: 'sailec_regular_italic',
+    fontFamily: 'Sailec Italic',
     fontSize: adjust(15),
   },
   boldItalic: {
-    fontFamily: 'sailec_bold_italic',
+    fontFamily: 'Sailec Bold Italic',
     fontSize: adjust(15),
   },
 });

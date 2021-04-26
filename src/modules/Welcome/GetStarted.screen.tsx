@@ -37,13 +37,13 @@ const style = StyleSheet.create({
   },
   heading: {
     fontSize: 32,
-    fontFamily: 'Sailec-Medium',
+    fontFamily: 'Sailec Medium',
     textAlign: 'center',
     fontWeight: '900',
   },
   para: {
     fontSize: 16,
     textAlign: 'center',
-    fontFamily: 'Sailec-Light',
+    fontFamily: 'Sailec Light',
   },
 });
