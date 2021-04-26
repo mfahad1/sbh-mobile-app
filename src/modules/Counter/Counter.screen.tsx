@@ -90,7 +90,7 @@ const style = StyleSheet.create({
   },
   circleRadii: {
     position: 'absolute',
-    left: Dimensions.get('screen').width * -0.205,
+    left: Dimensions.get('screen').width * -0.18,
   },
   counterCircleRadiiView: {
     alignItems: 'center',
