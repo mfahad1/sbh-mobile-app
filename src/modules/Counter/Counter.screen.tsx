@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import { useDispatch } from 'react-redux';
 import CircleRadiiSVG from '../../assets/icons/circleRadiiCounter.svg';
+import adjust from '../../common/adjustPixel';
 import ButtonGradient, { ButtonType } from '../../common/buttons';
 import CircleLayout from '../../common/circleLayout';
 import AppText from '../../common/Text/Text';
@@ -27,13 +28,19 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
           </AppText>
         </View>
         <View style={style.counterCircleRadiiView}>
-          <View style={style.circleRadii}>
+          
+          
+        
+
+        <View style={style.circleRadii}>
             <CircleRadiiSVG />
-          </View>
-          <View style={style.counterView}>
+        </View>
+
+        <View style={style.counterView}>
             <Text style={style.counterText}>{user.days_sober}</Text>
             <Text style={style.counterSubText}>DAYS</Text>
-          </View>
+        </View>
+
         </View>
         <View style={style.btnGroup}>
           <View style={style.btn}>
@@ -67,31 +74,43 @@ const style = StyleSheet.create({
   head: {
     height: Dimensions.get('screen').height * 0.13,
   },
-  counterView: {
-    borderRadius: 100,
-    elevation: 20,
-    backgroundColor: '#f1f5ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: Dimensions.get('screen').height * 0.16,
-    height: Dimensions.get('screen').height * 0.16,
-    marginBottom: 30,
-  },
-  counterText: {
-    fontFamily: 'Sailec Black',
-    fontSize: 30,
-    includeFontPadding: false,
-  },
+  
   counterSubText: {
     fontFamily: 'Sailec Bold',
-    fontSize: 15,
+    fontSize: adjust(15),
     color: '#69768d',
     includeFontPadding: false,
   },
   circleRadii: {
     position: 'absolute',
-    left: Dimensions.get('screen').width * -0.18,
+    justifyContent: 'center',
+
+
   },
+
+  counterView: {
+    borderRadius: Dimensions.get('screen').width / 2,
+    elevation: 20,
+    backgroundColor: '#f1f5ff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: Dimensions.get('screen').height * 0.14,
+    height: Dimensions.get('screen').height * 0.14,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+  },
+  counterText: {
+    fontFamily: 'Sailec Black',
+    fontSize: adjust(30),
+    includeFontPadding: false,
+  },
+
   counterCircleRadiiView: {
     alignItems: 'center',
     justifyContent: 'center',

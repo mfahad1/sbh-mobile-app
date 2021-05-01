@@ -86,6 +86,13 @@ const style = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     flex: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
   },
   headerCard: {
     borderRadius: 30,
