@@ -136,6 +136,13 @@ const styles = StyleSheet.create({
     elevation: 20,
     borderTopRightRadius: 22,
     borderTopLeftRadius: 22,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
   },
   iconView: {
     flexDirection: 'column',

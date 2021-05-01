@@ -109,5 +109,12 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     elevation: 20,
     borderRadius: 30,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 10,
+      height: 10,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 3.84,
   },
 });

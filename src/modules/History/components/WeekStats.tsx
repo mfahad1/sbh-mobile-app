@@ -110,14 +110,14 @@ const style = StyleSheet.create({
     borderBottomRightRadius: 25,
   },
   fixedWidth: {
-    width: 332,
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   daysRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: 332,
+    width: '100%',
     paddingHorizontal: 10,
   },
 });
