@@ -17,7 +17,7 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
 
   React.useEffect(() => {
     actionDispatcher(getUserAction());
-  }, [actionDispatcher]);
+  }, []);
 
   return (
     <CircleLayout>
@@ -29,7 +29,7 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
         </View>
         <View style={style.counterCircleRadiiView}>
           <View style={style.circleRadii}>
-            <CircleRadiiSVG />
+            <CircleRadiiSVG width={adjust(230)} />
           </View>
 
           <View style={style.counterView}>
@@ -100,7 +100,7 @@ const style = StyleSheet.create({
   },
   counterText: {
     fontFamily: 'sailec_black',
-    fontSize: adjust(30),
+    fontSize: adjust(25),
     includeFontPadding: false,
   },
 

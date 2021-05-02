@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import CircleRadiiSVG from '../../assets/icons/circleRadi.svg';
+import adjust from '../../common/adjustPixel';
 import AppText from '../../common/Text/Text';
 
 import { colors } from '../../styles/colors';
@@ -55,14 +56,21 @@ const recoveryTimeline: recoveryInfo[] = [
   },
 ];
 
-export default function RecoveryTimelineScreen({ navigation }: any): JSX.Element {
+export default function RecoveryTimelineScreen({ navigation, intake = false }: any): JSX.Element {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const _renderItem = ({ item: { stats, param, heading, text } }: { item: recoveryInfo }) => {
+    let styleWrapper = {
+      ...style.slide,
+    };
+
+    if (intake) {
+      styleWrapper = { ...styleWrapper, ...style.marginTop };
+    }
     return (
-      <View style={style.slide}>
+      <View style={styleWrapper}>
         <View style={style.info}>
           <View style={style.circleRadii}>
-            <CircleRadiiSVG />
+            <CircleRadiiSVG width={adjust(200)} />
           </View>
           <Text style={style.infoStats}>{stats}</Text>
           <Text style={style.infoParam}>{param} </Text>
@@ -83,7 +91,7 @@ export default function RecoveryTimelineScreen({ navigation }: any): JSX.Element
 
   const onBeforeSnapToItem = (index: number) => {
     setCurrentIndex(index);
-    if (index === recoveryTimeline.length - 1) {
+    if (index === recoveryTimeline.length - 1 && !intake) {
       setTimeout(() => navigation.navigate('DrawerNavigation', { screen: 'Counter' }), 100);
     }
   };
@@ -174,9 +182,13 @@ const style = StyleSheet.create({
   },
   paginationConatiner: {
     paddingHorizontal: 90,
+    paddingVertical: 1,
   },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  marginTop: {
+    marginTop: Dimensions.get('screen').height * 0.1,
   },
 });

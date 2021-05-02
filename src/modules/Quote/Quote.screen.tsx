@@ -33,7 +33,7 @@ export default function QuoteScreen({ navigation }: any): JSX.Element {
 
   const header = () => {
     if (!quotes.quote_today) {
-      return null;
+      return <View style={style.bannerContainer} />;
     }
 
     return (

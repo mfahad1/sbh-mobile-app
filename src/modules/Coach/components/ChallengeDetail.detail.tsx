@@ -84,9 +84,10 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   container: {
+    marginVertical: Dimensions.get('screen').height * 0.1,
     paddingHorizontal: 20,
     flex: 1,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 5,

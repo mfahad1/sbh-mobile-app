@@ -27,7 +27,7 @@ export async function getQuotes({ max = 10, page = 1 }: Params): Promise<QuotesL
 
     console.log({ motivation_home: response });
 
-    return mock;
+    return response;
   } catch (e) {
     throw new Error(e);
   }

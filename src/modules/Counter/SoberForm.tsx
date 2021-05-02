@@ -14,10 +14,8 @@ import ButtonGradient, { ButtonType } from '../../common/buttons';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../common/formik/input';
-import { useDispatch } from 'react-redux';
-import { reset, sobrietyCheckAction } from './redux/counter';
-import { useAppSelector } from '../../hooks/redux';
 import Toast from 'react-native-simple-toast';
+import { sobrietyCheck } from '../../services/sobriety';
 
 function showGradientOrNormal(value: number, selected = false, setValueActive: (val: number) => void): JSX.Element {
   if (selected) {
@@ -66,9 +64,7 @@ export default function SoberScreen({ navigation }: any): JSX.Element {
   const [anxious, setAnxious] = React.useState(1);
   const [depressed, setDepressed] = React.useState(1);
   const [craving, setCraving] = React.useState(1);
-  const dispatch = useDispatch();
-
-  const counter = useAppSelector((state) => state.counter);
+  const [loading, setLoading] = React.useState(false);
 
   const initialValues = {
     note: '',
@@ -77,28 +73,24 @@ export default function SoberScreen({ navigation }: any): JSX.Element {
     note: Yup.string().required('Required').label('Note'),
   });
 
-  React.useEffect(() => {
-    if (counter.success) {
-      Toast.showWithGravity('Success', Toast.SHORT, Toast.BOTTOM);
-      navigation.navigate('Counter');
-      dispatch(reset());
-    }
-    if (counter.error) {
-      Toast.showWithGravity(counter.error.message || 'Error', Toast.SHORT, Toast.BOTTOM);
-      navigation.navigate('Counter');
-    }
-  }, [counter, navigation, dispatch]);
-
   const onSubmit = async (payload: { note: string }) => {
-    dispatch(
-      sobrietyCheckAction({
+    try {
+      setLoading(true);
+      await sobrietyCheck({
         ...payload,
         feeling,
         anxious,
         depressed,
         craving,
-      }),
-    );
+      });
+      Toast.showWithGravity('Success', Toast.SHORT, Toast.BOTTOM);
+      navigation.navigate('History');
+    } catch (e) {
+      Toast.showWithGravity(e.message || 'Error', Toast.SHORT, Toast.BOTTOM);
+      navigation.navigate('Counter');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -206,7 +198,7 @@ export default function SoberScreen({ navigation }: any): JSX.Element {
                     <ButtonGradient type={ButtonType.danger} text="Cancel" onPress={() => navigation.navigate('Counter')} />
                   </View>
                   <View style={style.btn}>
-                    <ButtonGradient loading={counter.loading} text="Submit" onPress={() => onSubmit(values)} disabled={!isValid || !dirty} />
+                    <ButtonGradient loading={loading} text="Submit" onPress={() => onSubmit(values)} disabled={!isValid || !dirty} />
                   </View>
                 </View>
               </>
