@@ -40,7 +40,7 @@ export default function BottomTabNavigator(): JSX.Element {
       <Tab.Screen name="QuoteDetail" component={QuoteDetail} />
       <Tab.Screen name="Relapsed" component={Relapsed} />
       <Tab.Screen name="LearnCategory" component={LearnCategory} />
-      <Tab.Screen name="Intake" component={RecoveryTimelineScreen} />
+      <Tab.Screen name="Intake" component={() => <RecoveryTimelineScreen intake={true} />} />
       <Tab.Screen name="AnxietyHistory" component={AnxietyHistory} />
       <Tab.Screen name="AnxietyDetail" component={AnxietyDetail} />
     </Tab.Navigator>

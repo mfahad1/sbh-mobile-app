@@ -7,10 +7,14 @@ const GUIDES = 'counter/GUIDES';
 const CHALLENGES = 'counter/CHALLENGES';
 
 export const getGuidesAction = createAsyncThunk(GUIDES, (params: Params = { max: 10, page: 1 }) => {
+  console.log('hitting:::::');
+
   return getGuides(params);
 });
 
 export const getChallengesAction = createAsyncThunk(CHALLENGES, (params: Params = { max: 10, page: 1 }) => {
+  console.log('hitting:::::');
+
   return getChallenges(params);
 });
 
@@ -63,8 +67,6 @@ const coachSlice = createSlice({
         challenges: { challenges_collection },
       } = state;
 
-      console.log({ id11: state });
-
       state.activeChallenge = challenges_collection.find((item) => item.id === action.payload.id) || null;
     },
   },
@@ -85,6 +87,7 @@ const coachSlice = createSlice({
 
       .addCase(getChallengesAction.fulfilled, (state, action) => {
         const { page, limit, challenges_collection } = action.payload;
+
         state.challenges = { page, limit, challenges_collection: [...state.challenges.challenges_collection, ...challenges_collection] };
         state.loading = false;
       })

@@ -17,7 +17,7 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
 
   React.useEffect(() => {
     actionDispatcher(getUserAction());
-  }, [actionDispatcher]);
+  }, []);
 
   return (
     <CircleLayout>
@@ -28,19 +28,14 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
           </AppText>
         </View>
         <View style={style.counterCircleRadiiView}>
-          
-          
-        
+          <View style={style.circleRadii}>
+            <CircleRadiiSVG width={adjust(230)} />
+          </View>
 
-        <View style={style.circleRadii}>
-            <CircleRadiiSVG />
-        </View>
-
-        <View style={style.counterView}>
+          <View style={style.counterView}>
             <Text style={style.counterText}>{user.days_sober}</Text>
             <Text style={style.counterSubText}>DAYS</Text>
-        </View>
-
+          </View>
         </View>
         <View style={style.btnGroup}>
           <View style={style.btn}>
@@ -74,7 +69,7 @@ const style = StyleSheet.create({
   head: {
     height: Dimensions.get('screen').height * 0.13,
   },
-  
+
   counterSubText: {
     fontFamily: 'Sailec Bold',
     fontSize: adjust(15),
@@ -84,8 +79,6 @@ const style = StyleSheet.create({
   circleRadii: {
     position: 'absolute',
     justifyContent: 'center',
-
-
   },
 
   counterView: {
@@ -97,7 +90,7 @@ const style = StyleSheet.create({
     width: Dimensions.get('screen').height * 0.14,
     height: Dimensions.get('screen').height * 0.14,
 
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 5,
@@ -107,7 +100,7 @@ const style = StyleSheet.create({
   },
   counterText: {
     fontFamily: 'Sailec Black',
-    fontSize: adjust(30),
+    fontSize: adjust(25),
     includeFontPadding: false,
   },
 

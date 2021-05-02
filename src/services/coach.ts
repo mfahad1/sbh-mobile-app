@@ -29,6 +29,7 @@ export async function getGuides({ max = 10, page = 1 }: Params): Promise<GuidesR
 
     return response;
   } catch (e) {
+    console.log({ error: e });
     throw new Error(e);
   }
 }
@@ -51,6 +52,7 @@ export type ChallengesResponse = {
 
 export async function getChallenges({ max = 10, page = 1 }: Params): Promise<ChallengesResponse> {
   try {
+    console.log('hitting:::::');
     const response = await httpRequest.request<ChallengesResponse>({
       url: '/challenges',
       method: 'get',
@@ -61,6 +63,7 @@ export async function getChallenges({ max = 10, page = 1 }: Params): Promise<Cha
 
     return response;
   } catch (e) {
+    console.log({ error: e });
     throw new Error(e);
   }
 }
