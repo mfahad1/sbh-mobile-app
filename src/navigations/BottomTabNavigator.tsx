@@ -20,6 +20,8 @@ import AnxietyDetail from '../modules/History/components/AnxietyDetails';
 
 const Tab = createBottomTabNavigator();
 
+const IntakeComponent = () => <RecoveryTimelineScreen intake={true} />;
+
 export default function BottomTabNavigator(): JSX.Element {
   const isDrawerOpen = useIsDrawerOpen();
   const [, dispatch] = React.useContext(SessionContext);
@@ -40,7 +42,7 @@ export default function BottomTabNavigator(): JSX.Element {
       <Tab.Screen name="QuoteDetail" component={QuoteDetail} />
       <Tab.Screen name="Relapsed" component={Relapsed} />
       <Tab.Screen name="LearnCategory" component={LearnCategory} />
-      <Tab.Screen name="Intake" component={() => <RecoveryTimelineScreen intake={true} />} />
+      <Tab.Screen name="Intake" component={IntakeComponent} />
       <Tab.Screen name="AnxietyHistory" component={AnxietyHistory} />
       <Tab.Screen name="AnxietyDetail" component={AnxietyDetail} />
     </Tab.Navigator>

@@ -5,6 +5,7 @@ import AppNavigator from './src/navigations/AppNavigator';
 import SessionContextProvider from './src/contexts/session';
 import { Provider } from 'react-redux';
 import store from './src/redux/rootReducer';
+import ApiLoader from './src/common/apiLoader';
 
 const App = () => {
   return (

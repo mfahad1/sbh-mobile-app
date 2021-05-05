@@ -49,7 +49,7 @@ export default function AnxietyScore({ navigate }: any): JSX.Element {
   const dispatchAction = useDispatch();
 
   const navigateToAnxiety = () => {
-    dispatch({ type: 'SET_HEADER_TEXT', headerText: 'Anxiety & Depression' });
+    dispatch({ type: 'SET_HEADER_TEXT', headerText: 'Sobriety Score' });
 
     navigate('AnxietyHistory');
   };

@@ -61,12 +61,14 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
     return (
       <>
         {type ? (
-          <OrangeLinearGradient gradientStyle={{ ...style.headerCard, ...style.headerCenter }}>
-            <CravingFaceSVG />
+          <OrangeLinearGradient gradientStyle={[style.headerCard]}>
+            <View style={style.headerCenter}>
+              <CravingFaceSVG />
+            </View>
           </OrangeLinearGradient>
         ) : (
-            <MediaViewer text={guides.learn_primary?.text} imageUri={guides.learn_primary?.image_landscape} videoUri={guides.learn_primary?.video_uri} />
-          )}
+          <MediaViewer text={guides.learn_primary?.text} imageUri={guides.learn_primary?.image_landscape} videoUri={guides.learn_primary?.video_uri} />
+        )}
         <Text style={style.moreGuide}>{type ? 'Content would be helpful' : 'More Guides'}</Text>
       </>
     );
@@ -105,6 +107,11 @@ const style = StyleSheet.create({
     height: Dimensions.get('screen').height * 0.3,
     padding: 30,
     marginVertical: 20,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 20,
+    marginTop: 0,
   },
 
   // newTag: {
@@ -117,6 +124,8 @@ const style = StyleSheet.create({
   //   padding: 3,
   // },
   moreGuide: {
+    paddingTop: 40,
+    paddingBottom: 10,
     fontWeight: 'bold',
   },
   rowCardMainContent: {
@@ -134,7 +143,7 @@ const style = StyleSheet.create({
     marginVertical: 20,
     elevation: 10,
     flexDirection: 'row',
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 5,
@@ -151,8 +160,8 @@ const style = StyleSheet.create({
     paddingHorizontal: 20,
   },
   headerCenter: {
+    paddingVertical: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
   },
 });

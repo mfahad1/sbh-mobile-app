@@ -2,6 +2,7 @@ import { addWeeks, format, getDay, subWeeks } from 'date-fns';
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import { ApiLoaderWrapper } from '../../../common/apiLoader';
 import { DayMapper } from '../../../common/calender';
 import AppText from '../../../common/Text/Text';
 import { useAppSelector } from '../../../hooks/redux';
@@ -52,7 +53,7 @@ const GetRodeStateInfo = ({ craving, depressed, anxious, left }: GetRodeStateInf
 };
 
 export default function WeekStats({ monthSelection = false }: { monthSelection?: boolean }): JSX.Element {
-  const { historyDateMapped, historyDates, selectedDate } = useAppSelector((state) => state.history);
+  const { historyDateMapped, historyDates, selectedDate, loading } = useAppSelector((state) => state.history);
 
   const dispatchAction = useDispatch();
 
@@ -71,22 +72,24 @@ export default function WeekStats({ monthSelection = false }: { monthSelection?:
   return (
     <>
       {monthSelection && <MonthSelection dateAddOrSub={dateAddOrSub} selectedDateCurrent={selectedDate} weekly={true} />}
-      <View style={style.fixedWidth}>
-        <View style={style.weekStats}>
-          {historyDates.map((day, index) => {
-            const left = 20 + index * 2 + 45 * index;
+      <ApiLoaderWrapper loading={loading}>
+        <View style={style.fixedWidth}>
+          <View style={style.weekStats}>
+            {historyDates.map((day, index) => {
+              const left = 20 + index * 2 + 45 * index;
 
-            return <GetRodeStateInfo craving={+historyDateMapped[day].craving * 10} depressed={+historyDateMapped[day].depressed * 10} anxious={+historyDateMapped[day].anxious * 10} left={left} />;
-          })}
+              return <GetRodeStateInfo craving={+historyDateMapped[day].craving * 10} depressed={+historyDateMapped[day].depressed * 10} anxious={+historyDateMapped[day].anxious * 10} left={left} />;
+            })}
+          </View>
+          <View style={style.daysRow}>
+            {historyDates.map((day) => (
+              <AppText key={day} fontSize={10}>
+                {DayMapper[getDay(new Date(day))]}
+              </AppText>
+            ))}
+          </View>
         </View>
-        <View style={style.daysRow}>
-          {historyDates.map((day) => (
-            <AppText key={day} fontSize={10}>
-              {DayMapper[getDay(new Date(day))]}
-            </AppText>
-          ))}
-        </View>
-      </View>
+      </ApiLoaderWrapper>
     </>
   );
 }
