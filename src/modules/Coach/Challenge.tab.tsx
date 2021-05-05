@@ -54,14 +54,7 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
       onEndReached={onEndReached}
       contentContainerStyle={style.center}
       keyExtractor={(item, i) => item.id + i}
-      renderItem={({ item }) => (
-        <CardRow
-          navigate={() => navigateTo(item.id)}
-          ImageSource={{ uri: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2020/04/mars_landscape/21916769-2-eng-GB/Mars_landscape_pillars.jpg' }}
-          heading={item.name}
-          content={item.text}
-        />
-      )}
+      renderItem={({ item }) => <CardRow navigate={() => navigateTo(item.id)} ImageSource={{ uri: item.image }} heading={item.name} content={item.text} />}
     />
   );
 }

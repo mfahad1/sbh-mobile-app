@@ -1,19 +1,19 @@
 import { addDays, addMonths, format, getDaysInMonth, getWeekOfMonth, startOfMonth, subMonths } from 'date-fns';
 import * as React from 'react';
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { Dimensions, StyleSheet, View, Pressable } from 'react-native';
 
 import ArrowRightSVG from '../../../assets/icons/arrow-right.svg';
 import ArrowLeftSVG from '../../../assets/icons/arrow-left.svg';
 
 import AppText from '../../../common/Text/Text';
 import { enUS } from 'date-fns/locale';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import getCalender, { DayMapper } from '../../../common/calender';
 import { useAppSelector } from '../../../hooks/redux';
 import { useDispatch } from 'react-redux';
 import { setSelectedDate } from '../redux/history';
 import { DailySobriety } from '../../../services/history';
 import { anxiousIndicatorColor, cravingIndicatorColor, depressedIndicatorColor } from './AnxietyScore';
+import { ApiLoaderWrapper } from '../../../common/apiLoader';
 export enum AddOrSubDate {
   add = 'add',
   sub = 'sub',
@@ -29,17 +29,17 @@ export const MonthSelection = ({ dateAddOrSub, selectedDateCurrent, weekly = fal
   }
   return (
     <View style={style.monthSelection}>
-      <TouchableOpacity style={style.calenderMove} onPress={() => dateAddOrSub(AddOrSubDate.sub)}>
+      <Pressable style={style.calenderMove} onPressIn={() => dateAddOrSub(AddOrSubDate.sub)}>
         <ArrowLeftSVG />
-      </TouchableOpacity>
+      </Pressable>
 
       <AppText type="bold" fontSize={14} marginHorizontal={30}>
         {weekly ? `Week ${getWeekOfMonth(new Date(selectedMonth)) - 1}, ${monthDate}` : monthDate}
       </AppText>
 
-      <TouchableOpacity style={style.calenderMove} onPress={() => dateAddOrSub(AddOrSubDate.add)}>
+      <Pressable style={style.calenderMove} onPressIn={() => dateAddOrSub(AddOrSubDate.add)}>
         <ArrowRightSVG />
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };
@@ -59,7 +59,7 @@ function getGreatest(anxious: string, craving: string, depressed: string): 'anxi
 export default function MonthStats({ monthSelection = false }: { monthSelection?: boolean }): JSX.Element {
   const [calender, setCalender] = React.useState(getCalender());
   const [historyDateMapped, setHistoryDateMapped] = React.useState<{ [key: string]: DailySobriety }>();
-  const { historyByInterval, selectedDate } = useAppSelector((state) => state.history);
+  const { historyByInterval, selectedDate, loading } = useAppSelector((state) => state.history);
 
   React.useEffect(() => {
     const dates = [...Array(getDaysInMonth(new Date(selectedDate))).keys()].map((num) => format(addDays(new Date(selectedDate), num), 'yyyy-MM-dd'));
@@ -100,43 +100,45 @@ export default function MonthStats({ monthSelection = false }: { monthSelection?
   return (
     <>
       {monthSelection && <MonthSelection dateAddOrSub={dateAddOrSub} selectedDateCurrent={selectedDate} />}
-      <View style={style.container}>
-        {Object.values(DayMapper).map((day, dayIndex) => {
-          if (!calender[day]) {
-            return null;
-          }
+      <ApiLoaderWrapper loading={loading}>
+        <View style={style.container}>
+          {Object.values(DayMapper).map((day, dayIndex) => {
+            if (!calender[day]) {
+              return null;
+            }
 
-          return (
-            <View>
-              <AppText color="rgba(66, 93, 173, 0.5)" type="medium" fontSize={12} textAlign="center">
-                {day}
-              </AppText>
-              {calender[day]?.map((date, dateIndex) => {
-                const wholeDate = format(new Date(selectedJsDate.getUTCFullYear(), selectedJsDate.getUTCMonth(), date), 'yyy-MM-dd');
-                console.log(wholeDate);
-                console.log(historyDateMapped);
+            return (
+              <View>
+                <AppText color="rgba(66, 93, 173, 0.5)" type="medium" fontSize={12} textAlign="center">
+                  {day}
+                </AppText>
+                {calender[day]?.map((date, dateIndex) => {
+                  const wholeDate = format(new Date(selectedJsDate.getUTCFullYear(), selectedJsDate.getUTCMonth(), date), 'yyy-MM-dd');
+                  console.log(wholeDate);
+                  console.log(historyDateMapped);
 
-                let greatest = '';
+                  let greatest = '';
 
-                if (historyDateMapped && historyDateMapped[wholeDate]) {
-                  greatest = getGreatest(historyDateMapped[wholeDate].anxious, historyDateMapped[wholeDate].craving, historyDateMapped[wholeDate].depressed) as 'anxious' | 'craving' | 'depressed';
-                }
+                  if (historyDateMapped && historyDateMapped[wholeDate]) {
+                    greatest = getGreatest(historyDateMapped[wholeDate].anxious, historyDateMapped[wholeDate].craving, historyDateMapped[wholeDate].depressed) as 'anxious' | 'craving' | 'depressed';
+                  }
 
-                console.log({ greatest });
+                  console.log({ greatest });
 
-                return (
-                  <View key={dayIndex + dateIndex} style={style.dateValue}>
-                    <AppText color="#454f84" textAlign="center" type="medium" fontSize={10}>
-                      {date || ' '}
-                    </AppText>
-                    {date ? getIndicator(greatest) : null}
-                  </View>
-                );
-              })}
-            </View>
-          );
-        })}
-      </View>
+                  return (
+                    <View key={dayIndex + dateIndex} style={style.dateValue}>
+                      <AppText color="#454f84" textAlign="center" type="medium" fontSize={10}>
+                        {date || ' '}
+                      </AppText>
+                      {date ? getIndicator(greatest) : null}
+                    </View>
+                  );
+                })}
+              </View>
+            );
+          })}
+        </View>
+      </ApiLoaderWrapper>
     </>
   );
 }

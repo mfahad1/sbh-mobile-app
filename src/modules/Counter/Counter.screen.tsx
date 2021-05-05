@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import { useDispatch } from 'react-redux';
 import CircleRadiiSVG from '../../assets/icons/circleRadiiCounter.svg';
 import adjust from '../../common/adjustPixel';
+import ApiLoader from '../../common/apiLoader';
 import ButtonGradient, { ButtonType } from '../../common/buttons';
 import CircleLayout from '../../common/circleLayout';
 import AppText from '../../common/Text/Text';
@@ -12,7 +13,7 @@ import { getUserAction } from './redux/counter';
 
 export default function CounterScreen({ navigation }: any): JSX.Element {
   const [needHelp, setNeedHelp] = React.useState(false);
-  const user = useAppSelector((state) => state.counter.user);
+  const { user, loading } = useAppSelector((state) => state.counter);
   const actionDispatcher = useDispatch();
 
   React.useEffect(() => {
@@ -21,39 +22,47 @@ export default function CounterScreen({ navigation }: any): JSX.Element {
 
   return (
     <CircleLayout>
-      <View style={style.container}>
-        <View style={style.head}>
-          <AppText type="medium" fontSize={27} textAlign="center">
-            Congrats you're sober for
-          </AppText>
-        </View>
-        <View style={style.counterCircleRadiiView}>
-          <View style={style.circleRadii}>
-            <CircleRadiiSVG width={adjust(230)} />
+      <>
+        <View style={style.container}>
+          <View style={style.head}>
+            <AppText type="medium" fontSize={27} textAlign="center">
+              Congrats you're sober for
+            </AppText>
           </View>
+          <View style={style.counterCircleRadiiView}>
+            <View style={style.circleRadii}>
+              <CircleRadiiSVG width={adjust(230)} />
+            </View>
 
-          <View style={style.counterView}>
-            <Text style={style.counterText}>{user.days_sober}</Text>
-            <Text style={style.counterSubText}>DAYS</Text>
+            <View style={style.counterView}>
+              {loading ? (
+                <ApiLoader size={80} />
+              ) : (
+                <>
+                  <Text style={style.counterText}>{user.days_sober}</Text>
+                  <Text style={style.counterSubText}>DAYS</Text>
+                </>
+              )}
+            </View>
           </View>
-        </View>
-        <View style={style.btnGroup}>
-          <View style={style.btn}>
-            <ButtonGradient disabled={!user.isEditable || user.days_sober === 0} text="I Am Sober Today" onPress={() => navigation.navigate('Feedback')} />
+          <View style={style.btnGroup}>
+            <View style={style.btn}>
+              <ButtonGradient disabled={!user.isEditable || user.days_sober === 0} text="I Am Sober Today" onPress={() => navigation.navigate('Feedback')} />
+            </View>
+            <ButtonGradient type={ButtonType.danger} text="I Need Help" onPress={() => setNeedHelp(true)} />
           </View>
-          <ButtonGradient type={ButtonType.danger} text="I Need Help" onPress={() => setNeedHelp(true)} />
+          {needHelp && (
+            <NeedHelpModal
+              disableRelapsed={user.days_sober === 0}
+              setModalVisible={setNeedHelp}
+              navigate={(screen: string, params?: { [key: string]: string }) => {
+                navigation.navigate(screen, { ...params });
+                setNeedHelp(false);
+              }}
+            />
+          )}
         </View>
-        {needHelp && (
-          <NeedHelpModal
-            disableRelapsed={user.days_sober === 0}
-            setModalVisible={setNeedHelp}
-            navigate={(screen: string, params?: { [key: string]: string }) => {
-              navigation.navigate(screen, { ...params });
-              setNeedHelp(false);
-            }}
-          />
-        )}
-      </View>
+      </>
     </CircleLayout>
   );
 }

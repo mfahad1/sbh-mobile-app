@@ -128,8 +128,8 @@ export default function SoberScreen({ navigation }: any): JSX.Element {
                 () => (
                   <MehActiveSVG style={style.icon} />
                 ),
-                feeling === 'Neutral',
-                'Neutral',
+                feeling === 'Fine',
+                'Fine',
                 setFeeling,
               )}
               {showGradientOrNormalIcon(

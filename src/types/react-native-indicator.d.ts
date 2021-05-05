@@ -23,4 +23,11 @@ declare module 'react-native-indicator' {
   };
 
   export function OpacityDotsLoader(props: OpacityDotsLoaderProps): JSX.Element;
+
+  type RotationHoleLoaderProps = {
+    speed?: number;
+    size?: number;
+    rotationSpeed?: number;
+  };
+  export function RotationHoleLoader(props: RotationHoleLoaderProps): JSX.Element;
 }

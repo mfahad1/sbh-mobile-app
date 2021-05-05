@@ -47,10 +47,10 @@ export default function ButtonGradient({ text, type = ButtonType.success, button
         {loading ? (
           <OpacityDotsLoader color="white" speed={300} />
         ) : (
-            <AppText color={type === ButtonType.danger ? colors.pink : 'white'} type="bold" fontSize={12}>
-              {text}
-            </AppText>
-          )}
+          <AppText color={type === ButtonType.danger ? colors.pink : 'white'} type="bold" fontSize={12}>
+            {text}
+          </AppText>
+        )}
       </TouchableOpacity>
     </LinearGradient>
   );

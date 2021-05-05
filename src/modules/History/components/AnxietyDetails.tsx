@@ -109,8 +109,6 @@ const style = StyleSheet.create({
     borderRadius: 30,
     width: Dimensions.get('screen').width * 0.9,
     height: Dimensions.get('screen').height * 0.3,
-    padding: 30,
-    marginTop: 80,
     marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',

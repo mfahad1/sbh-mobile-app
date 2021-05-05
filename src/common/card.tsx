@@ -2,11 +2,7 @@ import * as React from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import { colors } from '../styles/colors';
 
-export default function Card({
-  children,
-}: {
-  children: React.ReactChild | React.ReactChildren;
-}): JSX.Element {
+export default function Card({ children }: { children: React.ReactChild | React.ReactChildren }): JSX.Element {
   return (
     <View style={style.cardHolder}>
       <View style={style.card}>{children}</View>
