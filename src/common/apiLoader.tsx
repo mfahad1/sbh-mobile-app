@@ -5,7 +5,7 @@ import { RotationHoleLoader } from 'react-native-indicator';
 export default function ApiLoader({ size = 50 }: { size: number }) {
   return (
     <View style={style.center}>
-      <RotationHoleLoader speed={300} size={size} rotationSpeed={1000} />
+      <RotationHoleLoader speed={50} size={size} rotationSpeed={1000} />
     </View>
   );
 }

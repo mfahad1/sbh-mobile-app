@@ -17,7 +17,7 @@ export default function LearnDetail(): JSX.Element {
   return (
     <CurvedLayout>
       <View style={style.containerMain}>
-        <MediaViewer videoUri="https://www.w3schools.com/html/mov_bbb.mp4" imageUri="https://static.dw.com/image/56471330_303.jpg" text={activeGuide.text} />
+        <MediaViewer videoUri={activeGuide?.video_uri} imageUri={activeGuide?.image_landscape} text={activeGuide?.text} />
         <ScrollView contentContainerStyle={style.content}>
           {/* <View style={style.headerCard} /> */}
           <View style={style.container}>
