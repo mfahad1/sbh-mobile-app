@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { getGuidesAction, setActiveGuide } from './redux/coach';
 import { useAppSelector } from '../../hooks/redux';
 import MediaViewer from '../../common/mediaViewer';
+import { useFocusEffect } from '@react-navigation/core';
 
 type CardRowProps = {
   navigate: () => void;
@@ -24,11 +25,15 @@ export function CardRow({ navigate, ImageSource, heading, content, children }: C
       <Image style={style.imagePng} source={ImageSource} />
       <View style={style.rowCardMainContent}>
         {heading && (
-          <AppText type="medium" fontSize={12}>
+          <AppText type="medium" fontSize={12} numberOfLines={5}>
             {heading}
           </AppText>
         )}
-        {content && <AppText fontSize={10}>{content}</AppText>}
+        {content && (
+          <AppText fontSize={10} numberOfLines={3}>
+            {content}
+          </AppText>
+        )}
         {children && children}
       </View>
     </TouchableOpacity>
@@ -37,11 +42,21 @@ export function CardRow({ navigate, ImageSource, heading, content, children }: C
 
 export default function LearnTab({ navigate, type }: any): JSX.Element {
   const [, dispatch] = React.useContext(SessionContext);
-
+  const [showMedia, setShowMedia] = React.useState(false);
   const actionDispatcher = useDispatch();
   React.useEffect(() => {
     actionDispatcher(getGuidesAction());
   }, [actionDispatcher]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      // Do something when the screen is focused
+      setShowMedia(true);
+      return () => {
+        setShowMedia(false);
+      };
+    }, []),
+  );
 
   const guides = useAppSelector((state) => state.coach.guides);
 
@@ -53,6 +68,35 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
     navigate('LearnDetail');
   };
 
+  const videOrFace = () => {
+    if (!guides.learn_primary) {
+      return null;
+    }
+    if (type) {
+      return (
+        <OrangeLinearGradient gradientStyle={[style.headerCard]}>
+          <View style={style.headerCenter}>
+            <CravingFaceSVG />
+          </View>
+        </OrangeLinearGradient>
+      );
+    }
+
+    if (!showMedia) {
+      return null;
+    };
+
+    return (
+      <MediaViewer
+        type={guides.learn_primary.type}
+        resourceUrl={guides.learn_primary.resourceUrl}
+        image_landscape={guides.learn_primary.image_landscape}
+        image={guides.learn_primary.image}
+        text={guides.learn_primary.text}
+      />
+    );
+  };
+
   const header = () => {
     if (!guides.learn_primary) {
       return null;
@@ -60,23 +104,17 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
 
     return (
       <>
-        {type ? (
-          <OrangeLinearGradient gradientStyle={[style.headerCard]}>
-            <View style={style.headerCenter}>
-              <CravingFaceSVG />
-            </View>
-          </OrangeLinearGradient>
-        ) : (
-          <MediaViewer text={guides.learn_primary?.text} imageUri={guides.learn_primary?.image_landscape} videoUri={guides.learn_primary?.video_uri} />
-        )}
+        {videOrFace()}
         <Text style={style.moreGuide}>{type ? 'Content would be helpful' : 'More Guides'}</Text>
       </>
     );
   };
 
   const onEndReached = () => {
-    console.log('eddnded::');
-    actionDispatcher(getGuidesAction({ page: guides.page + 1 }));
+    console.log('eddnded::', { guides });
+    if (guides.maxLimit > 0) {
+      actionDispatcher(getGuidesAction({ page: guides.page + 1 }));
+    }
   };
 
   return (
@@ -124,7 +162,7 @@ const style = StyleSheet.create({
   rowCardMainContent: {
     paddingHorizontal: 30,
     paddingVertical: 30,
-    paddingRight: Dimensions.get('screen').width * 0.2,
+    paddingRight: Dimensions.get('screen').width * 0.3,
     alignItems: 'flex-start',
     justifyContent: 'space-around',
   },
@@ -143,11 +181,13 @@ const style = StyleSheet.create({
     },
     shadowOpacity: 0.36,
     shadowRadius: 6.68,
+    alignItems: 'center',
   },
   imagePng: {
     aspectRatio: 1,
     resizeMode: 'contain',
-    borderRadius: 25,
+    borderRadius: 10,
+    width: Dimensions.get('screen').width * 0.3,
   },
   center: {
     paddingHorizontal: 20,

@@ -45,7 +45,12 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
     </>
   );
 
-  const onEndReached = () => actionDispatcher(getChallengesAction({ page: challenges.page + 1 }));
+  const onEndReached = () => {
+    console.log('eddnded::', { challenges });
+    if (challenges.maxLimit > 0) {
+      actionDispatcher(getChallengesAction({ page: challenges.page + 1 }));
+    }
+  };
 
   return (
     <FlatList

@@ -1,36 +1,52 @@
+import { useFocusEffect } from '@react-navigation/core';
 import * as React from 'react';
 import { Dimensions, Image, StyleSheet, View } from 'react-native';
-import Video from 'react-native-video';
 import AppText from './Text/Text';
+import VideoPlayer from './videoPlayer';
 
-export default function MediaViewer({ videoUri, imageUri, text }: { videoUri?: string; imageUri?: string; text?: string }) {
-  if (videoUri) {
+enum MediaType {
+  text = 'text',
+  video = 'video',
+  audio = 'audio',
+}
+
+type MediaViewerType = {
+  image: string;
+  image_landscape: string;
+  resourceUrl: string;
+  type: MediaType;
+  text: string;
+};
+
+export default function MediaViewer({ type, resourceUrl, image_landscape, text }: MediaViewerType) {
+  console.log({ type, resourceUrl, image_landscape, text })
+  const [showMedia, setShowMedia] = React.useState(false);
+  useFocusEffect(
+    React.useCallback(() => {
+      // Do something when the screen is focused
+      setShowMedia(true);
+      return () => {
+        setShowMedia(false);
+      };
+    }, []),
+  );
+  if ([MediaType.video, MediaType.audio].includes(type)) {
+    return showMedia ? <VideoPlayer uri={resourceUrl} /> : null;
+  }
+
+  if (type === MediaType.text) {
     return (
-      <View style={style.videoContainer}>
-        <Video
-          source={{ uri: videoUri }} // Can be a URL or a local file.
-          style={style.video}
-          posterResizeMode="stretch"
-          resizeMode="stretch"
-          controls={true}
-        />
+      <View style={style.text}>
+        {text && (
+          <AppText color="white" type="boldItalic" fontSize={22} numberOfLines={5} textAlign="center">
+            {`"${text}"`}
+          </AppText>
+        )}
       </View>
     );
   }
 
-  if (imageUri) {
-    return <Image style={style.imgPng} source={{ uri: imageUri }} />;
-  }
-
-  return (
-    <View style={style.text}>
-      {text && (
-        <AppText color="white" type="boldItalic" fontSize={22}>
-          {`"${text}"`}
-        </AppText>
-      )}
-    </View>
-  );
+  return <Image style={style.imgPng} source={{ uri: image_landscape }} />;
 }
 
 const style = StyleSheet.create({
@@ -43,23 +59,19 @@ const style = StyleSheet.create({
     marginTop: 0,
   },
   video: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    borderRadius: 30,
     height: Dimensions.get('screen').height * 0.3,
   },
   imgPng: {
-    resizeMode: 'contain',
-    borderRadius: 25,
+    borderRadius: 15,
     height: Dimensions.get('screen').height * 0.3,
+    width: Dimensions.get('screen').width * 0.9,
+    paddingHorizontal: 20,
+    alignSelf: 'center',
   },
   text: {
     backgroundColor: 'black',
     borderRadius: 30,
-    height: Dimensions.get('screen').height * 0.35,
+    height: Dimensions.get('screen').height * 0.3,
     padding: 30,
     paddingVertical: 30,
     marginVertical: 20,

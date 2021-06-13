@@ -17,7 +17,9 @@ export default function LearnDetail(): JSX.Element {
   return (
     <CurvedLayout>
       <View style={style.containerMain}>
-        <MediaViewer videoUri={activeGuide?.video_uri} imageUri={activeGuide?.image_landscape} text={activeGuide?.text} />
+        <View style={style.mediaContainer}>
+          <MediaViewer type={activeGuide.type} resourceUrl={activeGuide.resourceUrl} image_landscape={activeGuide.image_landscape} image={activeGuide.image} text={activeGuide.text} />
+        </View>
         <ScrollView contentContainerStyle={style.content}>
           {/* <View style={style.headerCard} /> */}
           <View style={style.container}>
@@ -59,5 +61,8 @@ const style = StyleSheet.create({
   },
   containerMain: {
     marginTop: Dimensions.get('screen').height * 0.1,
+  },
+  mediaContainer: {
+    height: Dimensions.get('screen').height * 0.3,
   },
 });

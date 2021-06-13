@@ -1,6 +1,10 @@
 import httpRequest from './config/HttpRequest';
 import { Params } from './quotes';
-
+enum MediaType {
+  text = 'text',
+  video = 'video',
+  audio = 'audio',
+}
 export type Guide = {
   author: string;
   id: string;
@@ -8,6 +12,8 @@ export type Guide = {
   image_landscape: string;
   name: string;
   text: string;
+  resourceUrl: string;
+  type: MediaType;
 };
 
 export type GuidesResponse = {

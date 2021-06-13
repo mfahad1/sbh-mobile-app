@@ -27,9 +27,14 @@ export default function QuoteScreen({ navigation }: any): JSX.Element {
     navigation.navigate('QuoteDetail');
   };
 
+
   const onEndReached = () => {
-    dispatchAction(getQuotesAction({ page: quotes.page + 1 }));
+    console.log('eddnded::', { quotes });
+    if (quotes.maxLimit > 0) {
+      dispatchAction(getQuotesAction({ page: quotes.page + 1 }));
+    }
   };
+
 
   const header = () => {
     if (!quotes.quote_today) {

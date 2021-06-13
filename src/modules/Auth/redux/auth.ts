@@ -16,19 +16,21 @@ const initialLoginState: LoginResponse = {
   success: false,
 };
 
+const initialState = {
+  login: initialLoginState,
+  loading: false,
+  error: null,
+} as {
+  login: LoginResponse;
+  loading: boolean;
+  error: null | SerializedError;
+};
+
 const authSlice = createSlice({
   name: 'auth',
-  initialState: {
-    login: initialLoginState,
-    loading: false,
-    error: null,
-  } as {
-    login: LoginResponse;
-    loading: boolean;
-    error: null | SerializedError;
-  },
+  initialState: initialState,
   reducers: {
-    // standard reducer logic, with auto-generated action types per reducer
+    reset: () => initialState,
   },
   extraReducers: (builder) => {
     builder
@@ -52,3 +54,4 @@ const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
+export const { reset } = authSlice.actions;

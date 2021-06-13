@@ -15,6 +15,7 @@ import { loginAction } from './redux/auth';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../hooks/redux';
 import Toast from 'react-native-simple-toast';
+import adjust from '../../common/adjustPixel';
 
 type LoginType = {
   email: string;
@@ -63,7 +64,9 @@ export default function LoginScreen({ navigation }: any): JSX.Element {
     <CircleLayout>
       <>
         <View style={style.alignCenter}>
-          <LogoSVG />
+          <View style={style.logo}>
+            <LogoSVG width={adjust(100)} />
+          </View>
           <AppText type="bold" fontSize={35}>
             SBH
           </AppText>
@@ -117,4 +120,7 @@ const style = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 3.84,
   },
+  logo: {
+    height: adjust(100),
+  }
 });
