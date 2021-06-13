@@ -4,8 +4,8 @@ import { OpacityDotsLoader } from 'react-native-indicator';
 import CurvedLayout from '../../../common/curvedLayout';
 import MediaViewer from '../../../common/mediaViewer';
 import AppText from '../../../common/Text/Text';
+import { addHttpsInUrl } from '../../../common/utlis';
 import { useAppSelector } from '../../../hooks/redux';
-import { colors } from '../../../styles/colors';
 
 export default function LearnDetail(): JSX.Element {
   const activeGuide = useAppSelector((state) => state.coach.activeGuide);
@@ -18,7 +18,13 @@ export default function LearnDetail(): JSX.Element {
     <CurvedLayout>
       <View style={style.containerMain}>
         <View style={style.mediaContainer}>
-          <MediaViewer type={activeGuide.type} resourceUrl={activeGuide.resourceUrl} image_landscape={activeGuide.image_landscape} image={activeGuide.image} text={activeGuide.text} />
+          <MediaViewer
+            type={activeGuide.type}
+            resourceUrl={addHttpsInUrl(activeGuide.resourceUrl)}
+            image_landscape={addHttpsInUrl(activeGuide.image_landscape)}
+            image={addHttpsInUrl(activeGuide.image)}
+            text={activeGuide.text}
+          />
         </View>
         <ScrollView contentContainerStyle={style.content}>
           {/* <View style={style.headerCard} /> */}

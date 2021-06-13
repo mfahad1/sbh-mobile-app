@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { getQuotesAction, setActiveQuote } from './redux/quotes';
 import { useAppSelector } from '../../hooks/redux';
 import { Quote } from '../../services/quotes';
+import { addHttpsInUrl } from '../../common/utlis';
 
 export default function QuoteScreen({ navigation }: any): JSX.Element {
   const [, dispatch] = React.useContext(SessionContext);
@@ -69,7 +70,7 @@ export default function QuoteScreen({ navigation }: any): JSX.Element {
         onEndReached={onEndReached}
         contentContainerStyle={style.scrollViewContainer}
         renderItem={({ item }) => (
-          <CardRow ImageSource={{ uri: item.image }} navigate={() => navigateTo(item)} content={item.text}>
+          <CardRow ImageSource={{ uri: addHttpsInUrl(item.image) }} navigate={() => navigateTo(item)} content={item.text}>
             <AppText type="bold" color="rgba(69, 79, 132, 0.6)" fontSize={10}>
               <>―{item.author}</>
             </AppText>

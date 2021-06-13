@@ -59,7 +59,7 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
       onEndReached={onEndReached}
       contentContainerStyle={style.center}
       keyExtractor={(item, i) => item.id + i}
-      renderItem={({ item }) => <CardRow navigate={() => navigateTo(item.id)} ImageSource={{ uri: item.image }} heading={item.name} content={item.text} />}
+      renderItem={({ item }) => <CardRow navigate={() => navigateTo(item.id)} ImageSource={{ uri: addHttpsInUrl(item.image) }} heading={item.name} content={item.text} />}
     />
   );
 }

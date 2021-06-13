@@ -54,6 +54,7 @@ const VideoPlayer = ({ uri }) => {
         onLoad={onLoad}
         onLoadStart={onLoadStart}
         onProgress={onProgress}
+        onError={e => console.error("video error:::::", e)}
         paused={paused}
         ref={(ref) => (videoPlayer.current = ref)}
         resizeMode="cover"

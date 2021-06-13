@@ -7,6 +7,7 @@ import { DetailCard } from '../../Coach/components/ChallengeDetail.detail';
 import AppText from '../../../common/Text/Text';
 import { useAppSelector } from '../../../hooks/redux';
 import { OpacityDotsLoader } from 'react-native-indicator';
+import { addHttpsInUrl } from '../../../common/utlis';
 
 export default function QuoteDetail(): JSX.Element {
   const { activeQuote } = useAppSelector((state) => state.quotes);
@@ -17,7 +18,7 @@ export default function QuoteDetail(): JSX.Element {
 
   return (
     <CurvedLayout>
-      <DetailCard ImageSection={() => <Image style={style.imgPng} source={{ uri: activeQuote.image }} />} heading="Sobriety Quote">
+      <DetailCard ImageSection={() => <Image style={style.imgPng} source={{ uri: addHttpsInUrl(activeQuote.image) }} />} heading="Sobriety Quote">
         <View style={style.content}>
           <View style={style.quote}>
             <AppText fontSize={10} color="#454f84" textAlign="center" lineHeight={20}>

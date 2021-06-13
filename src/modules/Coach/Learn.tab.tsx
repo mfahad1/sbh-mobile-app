@@ -11,6 +11,7 @@ import { getGuidesAction, setActiveGuide } from './redux/coach';
 import { useAppSelector } from '../../hooks/redux';
 import MediaViewer from '../../common/mediaViewer';
 import { useFocusEffect } from '@react-navigation/core';
+import { addHttpsInUrl } from '../../common/utlis';
 
 type CardRowProps = {
   navigate: () => void;
@@ -89,9 +90,9 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
     return (
       <MediaViewer
         type={guides.learn_primary.type}
-        resourceUrl={guides.learn_primary.resourceUrl}
-        image_landscape={guides.learn_primary.image_landscape}
-        image={guides.learn_primary.image}
+        resourceUrl={addHttpsInUrl(guides.learn_primary.resourceUrl)}
+        image_landscape={addHttpsInUrl(guides.learn_primary.image_landscape)}
+        image={addHttpsInUrl(guides.learn_primary.image)}
         text={guides.learn_primary.text}
       />
     );
@@ -125,7 +126,7 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
         onEndReached={onEndReached}
         contentContainerStyle={style.center}
         keyExtractor={(item, i) => item.id + i}
-        renderItem={({ item }) => <CardRow navigate={() => navigateTo(item.id)} ImageSource={{ uri: item.image }} heading={item.name} content={item.text} />}
+        renderItem={({ item }) => <CardRow navigate={() => navigateTo(item.id)} ImageSource={{ uri: addHttpsInUrl(item.image) }} heading={item.name} content={item.text} />}
       />
     </>
   );
