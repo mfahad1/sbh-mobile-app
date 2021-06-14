@@ -9,6 +9,7 @@ import { SessionContext } from '../../contexts/session';
 import { useDispatch } from 'react-redux';
 import { getChallengesAction, setActiveChallenge } from './redux/coach';
 import { useAppSelector } from '../../hooks/redux';
+import { addHttpsInUrl } from '../../common/utlis';
 
 export default function ChallengeTab({ navigate }: any): JSX.Element {
   const [, dispatch] = React.useContext(SessionContext);
