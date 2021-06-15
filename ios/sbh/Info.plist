@@ -30,8 +30,12 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>localhost</key>
+			<key>sunshine-alumni-mobile-app.s3.amazonaws.com</key>
 			<dict>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>

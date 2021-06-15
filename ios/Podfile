@@ -12,10 +12,10 @@ target 'sbh' do
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
 
-  install! 'cocoapods', :disable_input_output_paths => true
+#  install! 'cocoapods', :disable_input_output_paths => true
 
   target 'sbhTests' do
-    inherit! :completes
+    inherit! :complete
     # Pods for testing
   end
 
