@@ -46,7 +46,9 @@ export default function LearnTab({ navigate, type }: any): JSX.Element {
   const [showMedia, setShowMedia] = React.useState(false);
   const actionDispatcher = useDispatch();
   React.useEffect(() => {
-    actionDispatcher(getGuidesAction());
+    if (guides.maxLimit !== 0) {
+      actionDispatcher(getGuidesAction());
+    }
   }, [actionDispatcher]);
 
   useFocusEffect(

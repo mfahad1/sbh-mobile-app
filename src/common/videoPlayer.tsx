@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Image, View } from 'react-native';
 import Video from 'react-native-video';
 import MediaControls, { PLAYER_STATES } from 'react-native-media-controls';
+import { MediaType } from './mediaViewer';
 
-const VideoPlayer = ({ uri }) => {
+const VideoPlayer = ({ uri, type, img }: { img: string; uri: string; type: MediaType }) => {
   const videoPlayer = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -49,6 +50,7 @@ const VideoPlayer = ({ uri }) => {
 
   return (
     <View style={styles.container}>
+      {type === MediaType.video && <Image style={styles.imgPng} source={{ uri: img }} />}
       <Video
         onEnd={onEnd}
         onLoad={onLoad}
@@ -62,7 +64,7 @@ const VideoPlayer = ({ uri }) => {
           uri,
         }}
         repeat
-        style={styles.mediaPlayer}
+        style={type === MediaType.video ? styles.mediaPlayer : styles.audioPlayer}
         volume={100.0}
         fullscreen={isFullScreen}
       />
@@ -78,6 +80,7 @@ const VideoPlayer = ({ uri }) => {
         playerState={playerState}
         progress={currentTime}
         onFullScreen={() => setIsFullScreen(!isFullScreen)}
+        containerStyle={type === MediaType.video ? styles.mediaControlsVideo : styles.mediaControlsAudio}
       />
     </View>
   );
@@ -85,14 +88,7 @@ const VideoPlayer = ({ uri }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     height: Dimensions.get('screen').height * 0.3,
-  },
-  toolbar: {
-    marginTop: 30,
-    backgroundColor: 'white',
-    padding: 10,
-    borderRadius: 5,
   },
   mediaPlayer: {
     position: 'absolute',
@@ -101,6 +97,30 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0,
     backgroundColor: 'black',
+    height: Dimensions.get('screen').height * 0.3,
+  },
+  audioPlayer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    backgroundColor: 'black',
+    height: Dimensions.get('screen').height * 0.09,
+  },
+  mediaControlsAudio: {
+    height: Dimensions.get('screen').height * 0.07,
+  },
+  mediaControlsVideo: {
+    height: Dimensions.get('screen').height * 0.3,
+  },
+  imgPng: {
+    borderRadius: 15,
+    height: Dimensions.get('screen').height * 0.3,
+    width: Dimensions.get('screen').width * 0.9,
+    paddingHorizontal: 20,
+    alignSelf: 'center',
+    resizeMode: 'contain',
   },
 });
 

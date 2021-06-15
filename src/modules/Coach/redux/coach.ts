@@ -21,13 +21,13 @@ export const getChallengesAction = createAsyncThunk(CHALLENGES, (params: Params 
 const initialGuidesResponse = {
   learn_collection: [],
   learn_primary: null,
-  maxLimit: 0,
+  maxLimit: 1,
   page: 0,
 };
 
 const initialChallengesResponse = {
   challenges_collection: [],
-  limit: 0,
+  maxLimit: 1,
   page: 0,
 };
 
@@ -86,9 +86,9 @@ const coachSlice = createSlice({
       })
 
       .addCase(getChallengesAction.fulfilled, (state, action) => {
-        const { page, limit, challenges_collection } = action.payload;
+        const { page, maxLimit, challenges_collection } = action.payload;
 
-        state.challenges = { page, limit, challenges_collection: [...state.challenges.challenges_collection, ...challenges_collection] };
+        state.challenges = { page, maxLimit, challenges_collection: [...state.challenges.challenges_collection, ...challenges_collection] };
         state.loading = false;
       })
       .addCase(getChallengesAction.pending, (state) => {

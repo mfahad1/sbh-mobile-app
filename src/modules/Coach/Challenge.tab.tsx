@@ -18,7 +18,10 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
   const challenges = useAppSelector((state) => state.coach.challenges);
 
   React.useEffect(() => {
-    actionDispatcher(getChallengesAction());
+    console.log('coming her here here again', challenges);
+    if (challenges.maxLimit !== 0) {
+      actionDispatcher(getChallengesAction());
+    }
   }, []);
 
   const navigateTo = (id: string) => {

@@ -52,7 +52,7 @@ export type Challenge = {
 
 export type ChallengesResponse = {
   challenges_collection: Challenge[];
-  limit: number;
+  maxLimit: number;
   page: number;
 };
 

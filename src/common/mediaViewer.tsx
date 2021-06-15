@@ -4,7 +4,7 @@ import { Dimensions, Image, StyleSheet, View } from 'react-native';
 import AppText from './Text/Text';
 import VideoPlayer from './videoPlayer';
 
-enum MediaType {
+export enum MediaType {
   text = 'text',
   video = 'video',
   audio = 'audio',
@@ -31,19 +31,7 @@ export default function MediaViewer({ type, resourceUrl, image_landscape, text }
     }, []),
   );
   if ([MediaType.video, MediaType.audio].includes(type)) {
-    return showMedia ? <VideoPlayer uri={resourceUrl} /> : null;
-  }
-
-  if (type === MediaType.text) {
-    return (
-      <View style={style.text}>
-        {text && (
-          <AppText color="white" type="boldItalic" fontSize={22} numberOfLines={5} textAlign="center">
-            {`"${text}"`}
-          </AppText>
-        )}
-      </View>
-    );
+    return showMedia ? <VideoPlayer uri={resourceUrl} type={type} img={image_landscape} /> : null;
   }
 
   return <Image style={style.imgPng} source={{ uri: image_landscape }} />;
@@ -67,6 +55,7 @@ const style = StyleSheet.create({
     width: Dimensions.get('screen').width * 0.9,
     paddingHorizontal: 20,
     alignSelf: 'center',
+    resizeMode: 'contain',
   },
   text: {
     backgroundColor: 'black',
