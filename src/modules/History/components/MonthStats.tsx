@@ -1,6 +1,6 @@
 import { addDays, addMonths, format, getDaysInMonth, getWeekOfMonth, startOfMonth, subMonths } from 'date-fns';
 import * as React from 'react';
-import { Dimensions, StyleSheet, View, Pressable } from 'react-native';
+import { Dimensions, StyleSheet, View, Pressable, TouchableOpacity } from 'react-native';
 
 import ArrowRightSVG from '../../../assets/icons/arrow-right.svg';
 import ArrowLeftSVG from '../../../assets/icons/arrow-left.svg';
@@ -45,6 +45,9 @@ export const MonthSelection = ({ dateAddOrSub, selectedDateCurrent, weekly = fal
 };
 
 function getGreatest(anxious: string, craving: string, depressed: string): 'anxious' | 'craving' | 'depressed' | '' {
+  console.log("🚀 ~ file: MonthStats.tsx ~ line 48 ~ getGreatest ~ depressed", depressed)
+  console.log("🚀 ~ file: MonthStats.tsx ~ line 48 ~ getGreatest ~ craving", craving)
+  console.log("🚀 ~ file: MonthStats.tsx ~ line 48 ~ getGreatest ~ anxious", anxious)
   if (+anxious > 0 && +anxious >= +craving && +anxious >= +depressed) {
     return 'anxious';
   } else if (+craving > 0 && +craving > +anxious && +craving >= +depressed) {
@@ -56,7 +59,7 @@ function getGreatest(anxious: string, craving: string, depressed: string): 'anxi
   return '';
 }
 
-export default function MonthStats({ monthSelection = false }: { monthSelection?: boolean }): JSX.Element {
+export default function MonthStats({ monthSelection = false, onDateSelectInMonth }: { monthSelection?: boolean; onDateSelectInMonth?: (str: number) => void }): JSX.Element {
   const [calender, setCalender] = React.useState(getCalender());
   const [historyDateMapped, setHistoryDateMapped] = React.useState<{ [key: string]: DailySobriety }>();
   const { historyByInterval, selectedDate, loading } = useAppSelector((state) => state.history);
@@ -78,7 +81,7 @@ export default function MonthStats({ monthSelection = false }: { monthSelection?
     setCalender(getCalender(new Date(selectedDate)));
   }, [selectedDate]);
 
-  console.log({ historyByInterval });
+
 
   const dispatchAction = useDispatch();
 
@@ -114,8 +117,8 @@ export default function MonthStats({ monthSelection = false }: { monthSelection?
                 </AppText>
                 {calender[day]?.map((date, dateIndex) => {
                   const wholeDate = format(new Date(selectedJsDate.getUTCFullYear(), selectedJsDate.getUTCMonth(), date), 'yyy-MM-dd');
-                  console.log(wholeDate);
-                  console.log(historyDateMapped);
+
+
 
                   let greatest = '';
 
@@ -123,15 +126,15 @@ export default function MonthStats({ monthSelection = false }: { monthSelection?
                     greatest = getGreatest(historyDateMapped[wholeDate].anxious, historyDateMapped[wholeDate].craving, historyDateMapped[wholeDate].depressed) as 'anxious' | 'craving' | 'depressed';
                   }
 
-                  console.log({ greatest });
+
 
                   return (
-                    <View key={dayIndex + dateIndex} style={style.dateValue}>
+                    <TouchableOpacity key={dayIndex + dateIndex} style={style.dateValue} onPress={() => onDateSelectInMonth && onDateSelectInMonth(date)}>
                       <AppText color="#454f84" textAlign="center" type="medium" fontSize={10}>
                         {date || ' '}
                       </AppText>
                       {date ? getIndicator(greatest) : null}
-                    </View>
+                    </TouchableOpacity>
                   );
                 })}
               </View>

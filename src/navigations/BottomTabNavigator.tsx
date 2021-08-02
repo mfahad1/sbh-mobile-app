@@ -31,11 +31,11 @@ export default function BottomTabNavigator(): JSX.Element {
   }, [isDrawerOpen]);
 
   return (
-    <Tab.Navigator initialRouteName="Counter" tabBar={(_props): JSX.Element => <BottomBar {..._props} />}>
-      <Tab.Screen name="Counter" component={CounterScreen} />
+    <Tab.Navigator initialRouteName="Home" tabBar={(_props): JSX.Element => <BottomBar {..._props} />}>
+      <Tab.Screen name="Home" component={CounterScreen} />
       <Tab.Screen name="Coach" component={CoachScreen} />
       <Tab.Screen name="History" component={HistoryScreen} />
-      <Tab.Screen name="Quote" component={QuoteScreen} />
+      <Tab.Screen name="Motivation" component={QuoteScreen} />
       <Tab.Screen name="Feedback" component={SoberScreen} />
       <Tab.Screen name="LearnDetail" component={LearnDetail} />
       <Tab.Screen name="ChallengeDetail" component={ChallengeDetail} />

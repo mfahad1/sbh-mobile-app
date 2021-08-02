@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { colors } from '../styles/colors';
+import { getFontWRTPlatform } from './Text/Text';
 
 export default function InputWithIcon({ svg: SVG, isInvalid, inputProps }: { isInvalid: boolean; svg: React.ElementType; inputProps: any }): JSX.Element {
   return (
@@ -26,7 +27,7 @@ const style = StyleSheet.create({
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
     backgroundColor: colors.inputColor,
-    fontFamily: 'Sailec',
+    fontFamily: getFontWRTPlatform('Sailec'),
     fontSize: 13,
   },
 

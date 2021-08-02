@@ -6,7 +6,7 @@ import adjust from '../../common/adjustPixel';
 import ApiLoader from '../../common/apiLoader';
 import ButtonGradient, { ButtonType } from '../../common/buttons';
 import CircleLayout from '../../common/circleLayout';
-import AppText from '../../common/Text/Text';
+import AppText, { getFontWRTPlatform } from '../../common/Text/Text';
 import { useAppSelector } from '../../hooks/redux';
 import NeedHelpModal from './components/NeedHelpModal';
 import { getUserAction } from './redux/counter';
@@ -80,7 +80,7 @@ const style = StyleSheet.create({
   },
 
   counterSubText: {
-    fontFamily: 'Sailec Bold',
+    fontFamily: getFontWRTPlatform('Sailec Bold'),
     fontSize: adjust(15),
     color: '#69768d',
     includeFontPadding: false,
@@ -108,7 +108,7 @@ const style = StyleSheet.create({
     shadowRadius: 6.68,
   },
   counterText: {
-    fontFamily: 'Sailec Black',
+    fontFamily: getFontWRTPlatform('Sailec'),
     fontSize: adjust(25),
     includeFontPadding: false,
   },

@@ -5,7 +5,7 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import CircleRadiiSVG from '../../assets/icons/circleRadi.svg';
 import adjust from '../../common/adjustPixel';
-import AppText from '../../common/Text/Text';
+import AppText, { getFontWRTPlatform } from '../../common/Text/Text';
 
 import { colors } from '../../styles/colors';
 
@@ -160,12 +160,12 @@ const style = StyleSheet.create({
     marginBottom: 120,
   },
   infoStats: {
-    fontFamily: 'Sailec Black',
+    fontFamily: getFontWRTPlatform('Sailec Black'),
     fontSize: 55,
     color: '#ffff',
   },
   infoParam: {
-    fontFamily: 'Sailec Bold',
+    fontFamily: getFontWRTPlatform('Sailec Bold'),
     fontSize: 15,
     color: '#ffff',
   },

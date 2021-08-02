@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Platform, StyleSheet, Text } from 'react-native';
 import adjust from '../adjustPixel';
 
 export default function AppText({
@@ -48,29 +48,38 @@ export default function AppText({
   );
 }
 
+export const getFontWRTPlatform = (fontFamily: string) => {
+  return Platform.OS === 'android'
+    ? fontFamily
+      .split(' ')
+      .map((b) => b.toLocaleLowerCase())
+      .join('_')
+    : fontFamily;
+};
+
 const style = StyleSheet.create({
   regular: {
-    fontFamily: 'Sailec',
+    fontFamily: getFontWRTPlatform('Sailec'),
     fontSize: adjust(15),
   },
   bold: {
-    fontFamily: 'Sailec Bold',
+    fontFamily: getFontWRTPlatform('Sailec Bold'),
     fontSize: adjust(15),
   },
   medium: {
-    fontFamily: 'Sailec Medium',
+    fontFamily: getFontWRTPlatform('Sailec Medium'),
     fontSize: adjust(15),
   },
   black: {
-    fontFamily: 'Sailec Black',
+    fontFamily: getFontWRTPlatform('Sailec Black'),
     fontSize: adjust(15),
   },
   italic: {
-    fontFamily: 'Sailec Italic',
+    fontFamily: getFontWRTPlatform('Sailec Italic'),
     fontSize: adjust(15),
   },
   boldItalic: {
-    fontFamily: 'Sailec Bold Italic',
+    fontFamily: getFontWRTPlatform('Sailec Bold Italic'),
     fontSize: adjust(15),
   },
 });

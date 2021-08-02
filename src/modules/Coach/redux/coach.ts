@@ -1,19 +1,17 @@
 import { SerializedError } from '../../../redux/rootReducer';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ChallengesResponse, Challenge, getChallenges, getGuides, Guide, GuidesResponse } from '../../../services/coach';
+import { ChallengesResponse, Challenge, getChallenges, getGuides, Guide, GuidesResponse, FilterMediaType, GetGuidesParam } from '../../../services/coach';
 import { Params } from '../../../services/quotes';
 
 const GUIDES = 'counter/GUIDES';
 const CHALLENGES = 'counter/CHALLENGES';
 
-export const getGuidesAction = createAsyncThunk(GUIDES, (params: Params = { max: 10, page: 1 }) => {
-  console.log('hitting:::::');
+export const getGuidesAction = createAsyncThunk(GUIDES, (params: GetGuidesParam = { max: 10, page: 1 }) => {
 
   return getGuides(params);
 });
 
 export const getChallengesAction = createAsyncThunk(CHALLENGES, (params: Params = { max: 10, page: 1 }) => {
-  console.log('hitting:::::');
 
   return getChallenges(params);
 });
@@ -57,9 +55,6 @@ const coachSlice = createSlice({
       const {
         guides: { learn_collection },
       } = state;
-
-      console.log({ id11: state });
-
       state.activeGuide = learn_collection.find((guide) => guide.id === action.payload.id) || null;
     },
     setActiveChallenge: (state, action: PayloadAction<{ id: string }>) => {
@@ -68,6 +63,10 @@ const coachSlice = createSlice({
       } = state;
 
       state.activeChallenge = challenges_collection.find((item) => item.id === action.payload.id) || null;
+    },
+    resetLearnCollection: (state) => {
+      state.guides.learn_collection = [];
+      state.guides.maxLimit = 1;
     },
   },
   extraReducers: (builder) => {
@@ -102,4 +101,4 @@ const coachSlice = createSlice({
 });
 
 export default coachSlice.reducer;
-export const { reset, setActiveGuide, setActiveChallenge } = coachSlice.actions;
+export const { reset, setActiveGuide, setActiveChallenge, resetLearnCollection } = coachSlice.actions;

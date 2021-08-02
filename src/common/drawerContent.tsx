@@ -1,10 +1,8 @@
-import { Dimensions } from 'react-native';
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import AppText from './Text/Text';
 import LogoutSVG from '../assets/icons/logout.svg';
-import LogoSVG from '../assets/icons/logo.svg';
-import { colors } from '../styles/colors';
+import LogoSVG from '../assets/icons/logo1.svg';
 import adjust from './adjustPixel';
 import localStorageService from './localStorage';
 import { useDispatch } from 'react-redux';

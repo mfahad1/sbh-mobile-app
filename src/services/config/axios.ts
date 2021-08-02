@@ -24,7 +24,7 @@ axios.interceptors.response.use(
     } = error;
 
     if (status === 401) {
-      console.log('retrying....');
+
       const token = await getToken();
 
       if (!token) {
@@ -56,9 +56,9 @@ axios.interceptors.response.use(
 
 async function axiosRequest(options: AxiosRequestConfig): Promise<any> {
   const response = await axios(options);
+  console.log("🚀 ~ file: axios.ts ~ line 59 ~ axiosRequest ~ response", response)
   if ((response as any).adapter) {
     const retryResponse = await axios(response);
-
     return retryResponse.data;
   }
   return response.data;

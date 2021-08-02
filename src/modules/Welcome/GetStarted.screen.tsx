@@ -12,14 +12,13 @@ export default function GetStartedScreen({ navigation }: any): JSX.Element {
     <CircleLayout>
       <View style={style.container}>
         <View style={style.logo}>
-          <LogoSVG width={adjust(100)} />
+          <LogoSVG />
         </View>
         <AppText type="medium" fontSize={25} textAlign="center">
           Welcome to SBH Alumni App!
         </AppText>
         <AppText textAlign="center" color="#454f84" fontSize={13} lineHeight={25}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu
-          aliquet, molest.
+          We provide psychological, biological, and social factors, counselor, Psych and physical amenities
         </AppText>
         <ButtonGradient text="Get Started" onPress={() => navigation.navigate('RecoveryTimeline')} />
       </View>
@@ -35,6 +34,7 @@ const style = StyleSheet.create({
     flex: 1,
   },
   logo: {
-    height: adjust(100),
+    height: adjust(180),
+    width: adjust(200),
   }
 });

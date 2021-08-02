@@ -3,13 +3,13 @@ import { StyleSheet, View, Text, Dimensions, Image, FlatList } from 'react-nativ
 import { GreenDarkLinearGradient, GreyLinearGradient } from '../../common/linerGradients';
 import { colors } from '../../styles/colors';
 import RewardPNG from '../../assets/images/rewards.png';
-import { CardRow } from './Learn.tab';
 import AppText from '../../common/Text/Text';
 import { SessionContext } from '../../contexts/session';
 import { useDispatch } from 'react-redux';
 import { getChallengesAction, setActiveChallenge } from './redux/coach';
 import { useAppSelector } from '../../hooks/redux';
 import { addHttpsInUrl } from '../../common/utlis';
+import { CardRow } from '../../common/cardRow';
 
 export default function ChallengeTab({ navigate }: any): JSX.Element {
   const [, dispatch] = React.useContext(SessionContext);
@@ -18,15 +18,12 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
   const challenges = useAppSelector((state) => state.coach.challenges);
 
   React.useEffect(() => {
-    console.log('coming her here here again', challenges);
     if (challenges.maxLimit !== 0) {
       actionDispatcher(getChallengesAction());
     }
   }, []);
 
   const navigateTo = (id: string) => {
-    console.log({ id11: challenges });
-    console.log({ id11: id });
     dispatch({ type: 'SET_HEADER_TEXT', headerText: 'New Challenge' });
     actionDispatcher(setActiveChallenge({ id }));
     navigate('ChallengeDetail');
@@ -50,11 +47,14 @@ export default function ChallengeTab({ navigate }: any): JSX.Element {
   );
 
   const onEndReached = () => {
-    console.log('eddnded::', { challenges });
     if (challenges.maxLimit > 0) {
       actionDispatcher(getChallengesAction({ page: challenges.page + 1 }));
     }
   };
+
+  React.useEffect(() => {
+    console.log(challenges);
+  }, [challenges]);
 
   return (
     <FlatList

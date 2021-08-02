@@ -57,7 +57,7 @@ export default function NeedHelpModal({ setModalVisible, navigate, disableRelaps
               onPress={() => {
                 dispatch({ type: 'SET_HEADER_TEXT', headerText: 'I am Craving' });
 
-                navigate('LearnCategory', { type: 'depressed' });
+                navigate('LearnCategory', { type: 'craving' });
               }}
             />
           </View>

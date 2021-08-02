@@ -104,7 +104,6 @@ export function SobrietyCard({ faceType, date, anxiety, depression, craving, mar
 export default function HistoryScreen({ navigation }: any): JSX.Element {
   const dispatchAction = useDispatch();
   const { history, selectedDate, interval } = useAppSelector((state) => state.history);
-
   React.useEffect(() => {
     dispatchAction(getHistoryAction());
   }, [dispatchAction]);
@@ -155,15 +154,9 @@ export default function HistoryScreen({ navigation }: any): JSX.Element {
                 Recent Badges
               </AppText>
               <ScrollView horizontal={true} contentContainerStyle={style.recentBadges}>
-                <Image style={style.badgeImage} source={rewardL1RewardPNG} />
-                <Image style={style.badgeImage} source={rewardL2RewardPNG} />
-                <Image style={style.badgeImage} source={rewardL3RewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
-                <Image style={style.badgeImage} source={rewardLRewardPNG} />
+                {history.badges.map((badge, key) => (
+                  <Image key={key} style={style.badgeImage} source={{ uri: badge.resourceUrl }} />
+                ))}
               </ScrollView>
             </View>
 
@@ -173,7 +166,7 @@ export default function HistoryScreen({ navigation }: any): JSX.Element {
               </AppText>
 
               {history.daily_sobriety.length > 0 &&
-                history.daily_sobriety.map((daily) => (
+                history.daily_sobriety.map((daily, index) => (
                   <SobrietyCard
                     navigate={() => {
                       dispatchAction(setActiveHistory({ data: daily }));
@@ -185,6 +178,7 @@ export default function HistoryScreen({ navigation }: any): JSX.Element {
                     depression={+daily.depressed}
                     craving={+daily.craving}
                     marginVertical={10}
+                    key={index}
                   />
                 ))}
             </View>

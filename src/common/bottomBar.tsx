@@ -75,10 +75,10 @@ const BottomBar = (props: any) => {
 
   return (
     <View style={styles.bottomBarContainer}>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate('Counter')}>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
         {currentStateOfButton({
           currentScreen: screen,
-          wantedScreen: 'Counter',
+          wantedScreen: 'Home',
           NormalSvg: CounterSVG,
           ActiveSvg: CounterFillSVG,
         })}
@@ -101,10 +101,10 @@ const BottomBar = (props: any) => {
         })}
       </TouchableOpacity>
 
-      <TouchableWithoutFeedback onPress={() => gotoView('Quote')}>
+      <TouchableWithoutFeedback onPress={() => gotoView('Motivation')}>
         {currentStateOfButton({
           currentScreen: screen,
-          wantedScreen: 'Quote',
+          wantedScreen: 'Motivation',
           NormalSvg: QuoteSVG,
           ActiveSvg: QuoteFillSVG,
         })}

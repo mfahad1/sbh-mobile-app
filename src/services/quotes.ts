@@ -1,6 +1,7 @@
+import { FilterMediaType } from './coach';
 import httpRequest from './config/HttpRequest';
 
-export type Params = Partial<{ max: number; page: number }>;
+export type Params = Partial<{ max: number; page: number; type: FilterMediaType }>;
 
 export type Quote = {
   author: string;
@@ -25,7 +26,7 @@ export async function getQuotes({ max = 10, page = 1 }: Params): Promise<QuotesL
       params: { max, page },
     });
 
-    console.log({ motivation_home: response });
+
 
     return response;
   } catch (e) {

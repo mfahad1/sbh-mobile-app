@@ -8,18 +8,18 @@ export enum MediaType {
   text = 'text',
   video = 'video',
   audio = 'audio',
+  image = 'image',
 }
 
 type MediaViewerType = {
   image: string;
   image_landscape: string;
   resourceUrl: string;
-  type: MediaType;
+  type: Partial<MediaType>;
   text: string;
 };
 
-export default function MediaViewer({ type, resourceUrl, image_landscape, text }: MediaViewerType) {
-  console.log({ type, resourceUrl, image_landscape, text })
+export default function MediaViewer({ type, resourceUrl, image_landscape, text }: Partial<MediaViewerType>) {
   const [showMedia, setShowMedia] = React.useState(false);
   useFocusEffect(
     React.useCallback(() => {

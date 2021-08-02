@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { StyleSheet, View, Dimensions, ScrollView, Image } from 'react-native';
+import { StyleSheet, View, Dimensions, ScrollView } from 'react-native';
 import CurvedLayout from '../../../common/curvedLayout';
-import { GreenDarkLinearGradient } from '../../../common/linerGradients';
 
-import RewardPNG from '../../../assets/images/rewards.png';
 import PersonSVG from '../../../assets/icons/person-small.svg';
 import CalenderSVG from '../../../assets/icons/calendar.svg';
 import ButtonGradient from '../../../common/buttons';
 import AppText from '../../../common/Text/Text';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { useAppSelector } from '../../../hooks/redux';
 import { OpacityDotsLoader } from 'react-native-indicator';
+import MediaViewer, { MediaType } from '../../../common/mediaViewer';
 
 type DetailCard = {
   ImageSection: React.ElementType;
@@ -36,7 +35,6 @@ export function DetailCard({ ImageSection, heading, children }: DetailCard): JSX
 
 export default function ChallengeDetail(): JSX.Element {
   const { activeChallenge } = useAppSelector((state) => state.coach);
-  console.log({ activeChallenge });
 
   if (!activeChallenge) {
     return <OpacityDotsLoader color="white" speed={300} />;
@@ -44,13 +42,7 @@ export default function ChallengeDetail(): JSX.Element {
 
   return (
     <CurvedLayout>
-      <DetailCard
-        ImageSection={() => (
-          <GreenDarkLinearGradient gradientStyle={style.headerCard}>
-            <Image style={style.imagePng} source={RewardPNG} />
-          </GreenDarkLinearGradient>
-        )}
-        heading="3 Months Sobriety Check-in Streak">
+      <DetailCard ImageSection={() => <MediaViewer type={MediaType.image} image_landscape={activeChallenge.image_landscape} />} heading={activeChallenge.name}>
         <>
           <View style={style.contentStats}>
             <View style={style.alignRow}>
@@ -95,16 +87,6 @@ const style = StyleSheet.create({
     shadowOpacity: 0.36,
     shadowRadius: 6.68,
   },
-  headerCard: {
-    borderRadius: 30,
-    height: Dimensions.get('screen').height * 0.3,
-    padding: 30,
-    paddingHorizontal: 50,
-    marginVertical: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
 
   content: {
     borderRadius: 50,
@@ -115,10 +97,6 @@ const style = StyleSheet.create({
     marginBottom: 20,
   },
 
-  imagePng: {
-    width: Dimensions.get('screen').width * 0.35,
-    resizeMode: 'contain',
-  },
   contentStats: {
     flexDirection: 'row',
     paddingVertical: 20,

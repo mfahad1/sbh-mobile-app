@@ -2,7 +2,6 @@ import * as React from 'react';
 import { View, Text, StyleSheet, Dimensions, FlatList } from 'react-native';
 import CurvedLayout from '../../common/curvedLayout';
 import { colors } from '../../styles/colors';
-import { CardRow } from '../Coach/Learn.tab';
 import RewardL3PNG from '../../assets/images/rewardsL3.png';
 import AppText from '../../common/Text/Text';
 import { SessionContext } from '../../contexts/session';
@@ -11,6 +10,7 @@ import { getQuotesAction, setActiveQuote } from './redux/quotes';
 import { useAppSelector } from '../../hooks/redux';
 import { Quote } from '../../services/quotes';
 import { addHttpsInUrl } from '../../common/utlis';
+import { CardRow } from '../../common/cardRow';
 
 export default function QuoteScreen({ navigation }: any): JSX.Element {
   const [, dispatch] = React.useContext(SessionContext);
@@ -30,7 +30,7 @@ export default function QuoteScreen({ navigation }: any): JSX.Element {
 
 
   const onEndReached = () => {
-    console.log('eddnded::', { quotes });
+
     if (quotes.maxLimit > 0) {
       dispatchAction(getQuotesAction({ page: quotes.page + 1 }));
     }

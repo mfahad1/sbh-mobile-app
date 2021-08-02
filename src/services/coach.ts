@@ -23,19 +23,36 @@ export type GuidesResponse = {
   page: number;
 };
 
-export async function getGuides({ max = 10, page = 1 }: Params): Promise<GuidesResponse> {
-  try {
-    const response = await httpRequest.request<GuidesResponse>({
-      url: '/learn_home',
-      method: 'get',
-      params: { max, page },
-    });
+export enum FilterMediaType {
+  All = 'all',
+  Audio = 'audio',
+  Video = 'video',
+  Text = 'text',
+}
 
-    console.log({ learn_home: response });
+export enum GuideType {
+  anxious = 'anxious',
+  depressed = 'depressed',
+  craving = 'craving',
+}
+
+export type GetGuidesParam = { guideType?: GuideType } & Params;
+
+export async function getGuides({ max = 10, page = 1, type, guideType }: GetGuidesParam): Promise<GuidesResponse> {
+  try {
+    let params: { max: number; page: number; tag?: GuideType } = { max, page };
+    let url = type && type !== 'all' ? `/learn_home?type=${type}` : '/learn_home';
+    if (guideType) {
+      params = { ...params, tag: guideType };
+    }
+    const response = await httpRequest.request<GuidesResponse>({
+      url,
+      method: 'get',
+      params,
+    });
 
     return response;
   } catch (e) {
-    console.log({ error: e });
     throw new Error(e);
   }
 }
@@ -58,18 +75,14 @@ export type ChallengesResponse = {
 
 export async function getChallenges({ max = 10, page = 1 }: Params): Promise<ChallengesResponse> {
   try {
-    console.log('hitting:::::');
     const response = await httpRequest.request<ChallengesResponse>({
       url: '/challenges',
       method: 'get',
       params: { max, page },
     });
 
-    console.log({ challenges: response });
-
     return response;
   } catch (e) {
-    console.log({ error: e });
     throw new Error(e);
   }
 }

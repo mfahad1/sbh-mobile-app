@@ -23,6 +23,7 @@ export const getHistoryByIntervalAction = createAsyncThunk(GET_HISTORY_BY_INTERV
 const initialHistoryResponse: HistoryResponse = {
   daily_sobriety: [],
   streak: { current_checkin: null, longest_checkin: null },
+  badges: [],
 };
 
 const initialState = {
@@ -94,7 +95,7 @@ const historySlice = createSlice({
         state.loading = true;
       })
       .addCase(getHistoryByIntervalAction.rejected, (state, action) => {
-        console.log({ eactionError: action.error });
+
         state.loading = false;
         state.error = action.error;
         state.historyByInterval = [];

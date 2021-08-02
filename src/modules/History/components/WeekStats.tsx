@@ -78,7 +78,15 @@ export default function WeekStats({ monthSelection = false }: { monthSelection?:
             {historyDates.map((day, index) => {
               const left = 20 + index * 2 + 45 * index;
 
-              return <GetRodeStateInfo craving={+historyDateMapped[day].craving * 10} depressed={+historyDateMapped[day].depressed * 10} anxious={+historyDateMapped[day].anxious * 10} left={left} />;
+              return (
+                <GetRodeStateInfo
+                  key={index}
+                  craving={+historyDateMapped[day].craving * 10}
+                  depressed={+historyDateMapped[day].depressed * 10}
+                  anxious={+historyDateMapped[day].anxious * 10}
+                  left={left}
+                />
+              );
             })}
           </View>
           <View style={style.daysRow}>
@@ -100,7 +108,7 @@ const style = StyleSheet.create({
     paddingHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '100%',
+    width: 332,
   },
   rode: {
     backgroundColor: '#dae0ef',

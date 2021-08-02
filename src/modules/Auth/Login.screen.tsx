@@ -32,7 +32,7 @@ export default function LoginScreen({ navigation }: any): JSX.Element {
       error,
     } = auth;
     if (success) {
-      if (first_login) {
+      if (!first_login) {
         navigation.navigate('GetStarted');
 
         return;
@@ -65,7 +65,7 @@ export default function LoginScreen({ navigation }: any): JSX.Element {
       <>
         <View style={style.alignCenter}>
           <View style={style.logo}>
-            <LogoSVG width={adjust(100)} />
+            <LogoSVG />
           </View>
           <AppText type="bold" fontSize={35}>
             SBH
@@ -121,6 +121,7 @@ const style = StyleSheet.create({
     shadowRadius: 3.84,
   },
   logo: {
-    height: adjust(100),
+    height: adjust(120),
+    width: adjust(200),
   }
 });

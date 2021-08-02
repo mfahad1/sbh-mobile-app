@@ -50,7 +50,7 @@ const VideoPlayer = ({ uri, type, img }: { img: string; uri: string; type: Media
 
   return (
     <View style={styles.container}>
-      {type === MediaType.video && <Image style={styles.imgPng} source={{ uri: img }} />}
+      {type === MediaType.audio && <Image style={styles.imgPng} source={{ uri: img }} />}
       <Video
         onEnd={onEnd}
         onLoad={onLoad}
@@ -98,26 +98,22 @@ const styles = StyleSheet.create({
     right: 0,
     backgroundColor: 'black',
     height: Dimensions.get('screen').height * 0.3,
+    borderRadius: 25,
   },
   audioPlayer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    backgroundColor: 'black',
-    height: Dimensions.get('screen').height * 0.09,
+
   },
   mediaControlsAudio: {
-    height: Dimensions.get('screen').height * 0.07,
+    position: 'absolute',
+    width: Dimensions.get('screen').width,
   },
   mediaControlsVideo: {
     height: Dimensions.get('screen').height * 0.3,
+    borderRadius: 25,
   },
   imgPng: {
-    borderRadius: 15,
     height: Dimensions.get('screen').height * 0.3,
-    width: Dimensions.get('screen').width * 0.9,
+    width: Dimensions.get('screen').width,
     paddingHorizontal: 20,
     alignSelf: 'center',
     resizeMode: 'contain',

@@ -11,6 +11,7 @@ export type DailySobriety = {
 export type HistoryResponse = {
   daily_sobriety: DailySobriety[];
   streak: { current_checkin: number | null; longest_checkin: number | null };
+  badges: { challengeId: string; resourceUrl: string }[];
 };
 
 export async function getHistory(): Promise<HistoryResponse> {
